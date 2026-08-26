@@ -69,24 +69,8 @@ include __DIR__ . '/includes/header.php';
 
       <!-- Right Hero Visual Card -->
       <div class="col-lg-6">
-        <div class="hero-visual-card">
-          <img src="assets/images/hero-solar.jpg" alt="Fuzurra Rooftop Solar and Energy Installation" loading="eager">
-          
-          <!-- Floating Metrics Overlay -->
-          <div class="hero-floating-stat">
-            <div class="hero-stat-item">
-              <div class="hero-stat-number">25+</div>
-              <div class="hero-stat-label">Years Solar Life</div>
-            </div>
-            <div class="hero-stat-item border-start border-secondary ps-3">
-              <div class="hero-stat-number">98.6%</div>
-              <div class="hero-stat-label">Peak Efficiency</div>
-            </div>
-            <div class="hero-stat-item border-start border-secondary ps-3">
-              <div class="hero-stat-number">100%</div>
-              <div class="hero-stat-label">Clean Energy</div>
-            </div>
-          </div>
+        <div class="hero-visual-card shadow-lg">
+          <img src="assets/images/hero-solar.jpg?v=<?php echo file_exists(__DIR__ . '/assets/images/hero-solar.jpg') ? filemtime(__DIR__ . '/assets/images/hero-solar.jpg') : '2.0'; ?>" alt="Fuzurra Xtreme Power Lithium Battery for Solar &amp; Inverter System - 60 Months Warranty" loading="eager" class="img-fluid w-100">
         </div>
       </div>
     </div>
