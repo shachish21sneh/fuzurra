@@ -31,7 +31,7 @@ include __DIR__ . '/includes/header.php';
         </h1>
         
         <p class="hero-subtitle">
-          Complete Solar, Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> Empowering homes, businesses, and industrial facilities with reliable, future-ready energy.
+          Complete Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> — Empowering homes, businesses, and industrial facilities with reliable, energy-efficient, and future-ready solutions, including solar inverters, lithium and lead-acid batteries, battery trolleys, home UPS systems, domestic and commercial lighting solutions, air coolers, water heater, led tv , mobile , earbuds, and other electrical and electronic products. We are committed to delivering quality products, dependable performance, and complete energy and electrical solutions tailored to residential, commercial, and industrial requirements.
         </p>
 
         <!-- CTA Buttons -->
