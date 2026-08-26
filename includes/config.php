@@ -34,6 +34,15 @@ function isActivePage($pageName) {
     return '';
 }
 
+// Helper: Active Dropdown Parent Item
+function isDropdownActive($pages = []) {
+    $current = basename($_SERVER['PHP_SELF'], '.php');
+    if (in_array($current, $pages)) {
+        return 'active';
+    }
+    return '';
+}
+
 // Helper: Generate CSRF Token
 function getCsrfToken() {
     if (empty($_SESSION['csrf_token'])) {

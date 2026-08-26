@@ -77,7 +77,7 @@ require_once __DIR__ . '/config.php';
 
         <!-- Desktop Navigation Links -->
         <div class="collapse navbar-collapse" id="desktopNav">
-          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-1">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-1 align-items-center">
             <li class="nav-item">
               <a class="nav-link <?php echo isActivePage('index'); ?>" href="index.php">Home</a>
             </li>
@@ -87,19 +87,54 @@ require_once __DIR__ . '/config.php';
             <li class="nav-item">
               <a class="nav-link <?php echo isActivePage('products'); ?>" href="products.php">Products</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('solar-solutions'); ?>" href="solar-solutions.php">Solar Solutions</a>
+            <!-- Solutions Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle <?php echo isDropdownActive(['solar-solutions', 'pm-surya-ghar', 'battery-solutions']); ?>" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Solutions
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom shadow-lg border-0" aria-labelledby="solutionsDropdown">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-3 py-2 <?php echo isActivePage('solar-solutions'); ?>" href="solar-solutions.php">
+                    <div class="dropdown-icon-box bg-warning bg-opacity-10 text-warning">
+                      <i class="bi bi-sun-fill"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block text-dark">Solar Solutions</strong>
+                      <span class="text-muted small">Residential, Commercial &amp; Industrial</span>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-3 py-2 <?php echo isActivePage('pm-surya-ghar'); ?>" href="pm-surya-ghar.php">
+                    <div class="dropdown-icon-box bg-success bg-opacity-10 text-success">
+                      <i class="bi bi-award-fill"></i>
+                    </div>
+                    <div>
+                      <div class="d-flex align-items-center gap-2">
+                        <strong class="d-block text-dark">PM Surya Ghar</strong>
+                        <span class="badge bg-warning text-dark fw-bold" style="font-size: 0.65rem;">GOVT SUBSIDY</span>
+                      </div>
+                      <span class="text-muted small">Muft Bijli Scheme &amp; Direct DBT</span>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-3 py-2 <?php echo isActivePage('battery-solutions'); ?>" href="battery-solutions.php">
+                    <div class="dropdown-icon-box bg-primary bg-opacity-10 text-primary">
+                      <i class="bi bi-battery-charging"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block text-dark">Battery Solutions</strong>
+                      <span class="text-muted small">LiFePO4 Lithium &amp; Tall Tubular</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php echo isActivePage('services'); ?>" href="services.php">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('pm-surya-ghar'); ?>" href="pm-surya-ghar.php">
-                <span class="badge bg-warning text-dark me-1" style="font-size: 0.7rem;">GOVT</span> PM Surya Ghar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('battery-solutions'); ?>" href="battery-solutions.php">Battery Solutions</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php echo isActivePage('dealer'); ?>" href="dealer.php">Dealer / Distributor</a>
@@ -149,24 +184,35 @@ require_once __DIR__ . '/config.php';
             <i class="bi bi-grid-fill me-2 text-success"></i> Products
           </a>
         </li>
+        <!-- Mobile Solutions Dropdown Accordion -->
         <li class="nav-item">
-          <a class="nav-link <?php echo isActivePage('solar-solutions'); ?>" href="solar-solutions.php">
-            <i class="bi bi-sun-fill me-2 text-warning"></i> Solar Solutions
+          <a class="nav-link d-flex justify-content-between align-items-center <?php echo isDropdownActive(['solar-solutions', 'pm-surya-ghar', 'battery-solutions']); ?>" data-bs-toggle="collapse" href="#mobileSolutionsCollapse" role="button" aria-expanded="<?php echo isDropdownActive(['solar-solutions', 'pm-surya-ghar', 'battery-solutions']) ? 'true' : 'false'; ?>" aria-controls="mobileSolutionsCollapse">
+            <span><i class="bi bi-lightning-charge-fill me-2 text-warning"></i> Solutions</span>
+            <i class="bi bi-chevron-down small"></i>
           </a>
+          <div class="collapse ps-3 mt-1 <?php echo isDropdownActive(['solar-solutions', 'pm-surya-ghar', 'battery-solutions']) ? 'show' : ''; ?>" id="mobileSolutionsCollapse">
+            <ul class="navbar-nav gap-1">
+              <li class="nav-item">
+                <a class="nav-link py-2 <?php echo isActivePage('solar-solutions'); ?>" href="solar-solutions.php">
+                  <i class="bi bi-sun-fill me-2 text-warning"></i> Solar Solutions
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2 <?php echo isActivePage('pm-surya-ghar'); ?>" href="pm-surya-ghar.php">
+                  <i class="bi bi-award-fill me-2 text-success"></i> PM Surya Ghar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2 <?php echo isActivePage('battery-solutions'); ?>" href="battery-solutions.php">
+                  <i class="bi bi-battery-charging me-2 text-primary"></i> Battery Solutions
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link <?php echo isActivePage('services'); ?>" href="services.php">
             <i class="bi bi-tools me-2 text-success"></i> Services
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php echo isActivePage('pm-surya-ghar'); ?>" href="pm-surya-ghar.php">
-            <i class="bi bi-award-fill me-2 text-warning"></i> PM Surya Ghar: Muft Bijli
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php echo isActivePage('battery-solutions'); ?>" href="battery-solutions.php">
-            <i class="bi bi-battery-charging me-2 text-success"></i> Battery Solutions
           </a>
         </li>
         <li class="nav-item">
