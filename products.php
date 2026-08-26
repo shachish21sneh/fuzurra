@@ -627,37 +627,78 @@ include __DIR__ . '/includes/header.php';
       <div class="col-xl-4 col-md-6 product-grid-item" data-category="power">
         <div class="product-card">
           <div class="product-thumb">
-            <img src="assets/images/products/lithium-battery.jpg" alt="Lithium LiFePO4 Energy Storage - Fuzurra">
-            <span class="category-badge-pill"><i class="bi bi-battery-charging text-success me-1"></i> LiFePO4 Lithium</span>
-            <span class="warranty-badge">5–10 Years Warranty</span>
+            <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.0'; ?>" alt="FUZURRA Wall Mount Lithium Battery 51.2V 100AH LiFePO4">
+            <span class="category-badge-pill"><i class="bi bi-battery-charging text-success me-1"></i> Wall Mount LiFePO4</span>
+            <span class="warranty-badge">6000+ Cycles / 5+ Yrs</span>
           </div>
           <div class="product-body">
-            <h3 class="product-title">LiFePO4 Wall-Mounted Lithium Battery</h3>
+            <h3 class="product-title">Wall Mount Lithium Battery (51.2V 100AH)</h3>
             <p class="product-desc">
-              State-of-the-art Lithium Iron Phosphate (LiFePO4) smart energy storage with integrated intelligent BMS, 6000+ deep cycles, and ultra-compact profile.
+              State-of-the-art 51.2V 100Ah Lithium Iron Phosphate (LiFePO4) smart energy storage with high energy density, 6000+ cycles, and integrated Smart BMS. Power your home, power your future.
             </p>
             <ul class="product-features-checklist">
-              <li><i class="bi bi-check-circle-fill"></i> 10+ Years Operational Lifespan (6000+ Cycles @ 80% DoD)</li>
-              <li><i class="bi bi-check-circle-fill"></i> 2-Hour Ultra-Fast Charging Capability</li>
-              <li><i class="bi bi-check-circle-fill"></i> Zero Maintenance &amp; 70% Space/Weight Reduction</li>
+              <li><i class="bi bi-check-circle-fill"></i> Safe &amp; Reliable High Energy Density LiFePO4 Cells</li>
+              <li><i class="bi bi-check-circle-fill"></i> Long Life 6000+ Cycles (10+ Years Operational Lifespan)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Smart BMS Protection with Fast Rapid Charging</li>
             </ul>
             <ul class="product-specs-list">
-              <li><span class="label">Voltage &amp; Capacity:</span> <span class="val">48V / 51.2V 100Ah (5.12 kWh) &amp; 10 kWh</span></li>
+              <li><span class="label">Voltage &amp; Capacity:</span> <span class="val">51.2V 100Ah (5.12 kWh Storage)</span></li>
               <li><span class="label">BMS Safety:</span> <span class="val">Over-charge, Over-discharge, Temp &amp; Short Circuit</span></li>
-              <li><span class="label">Mounting:</span> <span class="val">Sleek Wall-Mount or Server Rack</span></li>
-              <li><span class="label">Applications:</span> <span class="val">Hybrid Solar Systems, Modern Villas, Data Centers</span></li>
+              <li><span class="label">Mounting:</span> <span class="val">Sleek Wall-Mount Space-Saving Profile</span></li>
+              <li><span class="label">Applications:</span> <span class="val">Home Backup, Solar Systems, Commercial &amp; Industrial</span></li>
             </ul>
           </div>
           <div class="product-card-footer">
-            <button type="button" class="btn-enquire" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="LiFePO4 Lithium Battery" data-category="Lithium Battery Storage (LiFePO4)">
+            <button type="button" class="btn-enquire" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="Wall Mount Lithium Battery 51.2V 100AH" data-category="Lithium Battery Storage (LiFePO4)">
               <i class="bi bi-envelope-fill"></i> Enquire Now
             </button>
-            <a href="<?php echo getProductWaLink('Lithium LiFePO4 Battery'); ?>" target="_blank" class="btn-wa-product">
+            <a href="<?php echo getProductWaLink('Wall Mount Lithium Battery 51.2V 100AH'); ?>" target="_blank" class="btn-wa-product">
               <i class="bi bi-whatsapp"></i> WhatsApp
             </a>
           </div>
           <div class="px-3 pb-3 bg-light text-center border-top">
-            <a href="#" class="btn btn-sm btn-link text-decoration-none text-muted small btn-download-brochure" data-product="Lithium Battery">
+            <a href="#" class="btn btn-sm btn-link text-decoration-none text-muted small btn-download-brochure" data-product="Wall Mount Lithium Battery">
+              <i class="bi bi-file-earmark-arrow-down-fill text-danger me-1"></i> Download Technical Datasheet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.5 E-Rickshaw & EV Power Battery (Xtreme Power) -->
+      <div class="col-xl-4 col-md-6 product-grid-item" data-category="power">
+        <div class="product-card">
+          <div class="product-thumb">
+            <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.0'; ?>" alt="FUZURRA E-Rickshaw Battery Xtreme Power LiFePO4">
+            <span class="category-badge-pill"><i class="bi bi-ev-front-fill text-primary me-1"></i> E-Rickshaw EV</span>
+            <span class="warranty-badge">3 Years Warranty</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">E-Rickshaw &amp; Xtreme Power LiFePO4 Battery</h3>
+            <p class="product-desc">
+              Drive power, drive the future. Heavy-duty next-gen power storage engineered with high-capacity LiFePO4 chemistry for extra mileage, fast charging, and rugged durability on Indian roads.
+            </p>
+            <ul class="product-features-checklist">
+              <li><i class="bi bi-check-circle-fill"></i> High Capacity &amp; High Mileage per Charge</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fast Charging with Less Downtime &amp; More Performance</li>
+              <li><i class="bi bi-check-circle-fill"></i> Advanced BMS Multi-Protection (Eco-Friendly &amp; Lightweight)</li>
+            </ul>
+            <ul class="product-specs-list">
+              <li><span class="label">Model Series:</span> <span class="val">FZLT24250L / 25.6V 5.12kWh 200Ah &amp; 51.2V</span></li>
+              <li><span class="label">Technology:</span> <span class="val">Lithium LiFePO4 Heavy Cycle Chemistry</span></li>
+              <li><span class="label">Durability:</span> <span class="val">Vibration Resistant - Made for Indian Roads</span></li>
+              <li><span class="label">Applications:</span> <span class="val">E-Rickshaws, Commercial EV, Home UPS &amp; Solar</span></li>
+            </ul>
+          </div>
+          <div class="product-card-footer">
+            <button type="button" class="btn-enquire" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="E-Rickshaw Xtreme Power Battery" data-category="Lithium Battery Storage (LiFePO4)">
+              <i class="bi bi-envelope-fill"></i> Enquire Now
+            </button>
+            <a href="<?php echo getProductWaLink('E-Rickshaw Xtreme Power Battery'); ?>" target="_blank" class="btn-wa-product">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+          <div class="px-3 pb-3 bg-light text-center border-top">
+            <a href="#" class="btn btn-sm btn-link text-decoration-none text-muted small btn-download-brochure" data-product="E-Rickshaw Battery">
               <i class="bi bi-file-earmark-arrow-down-fill text-danger me-1"></i> Download Technical Datasheet
             </a>
           </div>
@@ -665,10 +706,51 @@ include __DIR__ . '/includes/header.php';
       </div>
 
       <!-- ==========================================
-           3. HOME APPLIANCES
+           3. HOME APPLIANCES & LIGHTING
            ========================================== -->
 
-      <!-- 3.1 Smart LED TVs -->
+      <!-- 3.1 Domestic LED Lighting Solutions -->
+      <div class="col-xl-4 col-md-6 product-grid-item" data-category="appliances">
+        <div class="product-card">
+          <div class="product-thumb">
+            <img src="assets/images/products/domestic-led-lighting.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/domestic-led-lighting.png') ? filemtime(__DIR__ . '/assets/images/products/domestic-led-lighting.png') : '2.0'; ?>" alt="FUZURRA Premium Domestic LED Lighting Solutions">
+            <span class="category-badge-pill"><i class="bi bi-lightbulb-fill text-warning me-1"></i> LED Lighting</span>
+            <span class="warranty-badge">2 Years Warranty</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Premium Domestic LED Lighting Solutions</h3>
+            <p class="product-desc">
+              Brighten every corner and light up every life. High-brightness energy-saving LED panel lights, bulbs, batten lights, spotlights, and floodlights with flicker-free comfort and surge safety.
+            </p>
+            <ul class="product-features-checklist">
+              <li><i class="bi bi-check-circle-fill"></i> High Brightness with Low Power Consumption</li>
+              <li><i class="bi bi-check-circle-fill"></i> Comfort Flicker-Free &amp; Eye-Friendly Illumination</li>
+              <li><i class="bi bi-check-circle-fill"></i> Surge Protection &amp; Overheat Safety Built-in</li>
+            </ul>
+            <ul class="product-specs-list">
+              <li><span class="label">Product Range:</span> <span class="val">Panel Lights, Bulbs, Battens, Spot &amp; Flood Lights</span></li>
+              <li><span class="label">Lifespan:</span> <span class="val">Long Life &amp; High Lumen Maintenance</span></li>
+              <li><span class="label">Spaces:</span> <span class="val">Living Room, Bedroom, Kitchen, Balcony, Bathroom</span></li>
+              <li><span class="label">Warranty &amp; Make:</span> <span class="val">2 Years Warranty | Made in India</span></li>
+            </ul>
+          </div>
+          <div class="product-card-footer">
+            <button type="button" class="btn-enquire" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="Premium Domestic LED Lighting" data-category="Home Appliances (Inverter AC / Smart LED TV)">
+              <i class="bi bi-envelope-fill"></i> Enquire Now
+            </button>
+            <a href="<?php echo getProductWaLink('Premium Domestic LED Lighting'); ?>" target="_blank" class="btn-wa-product">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+          <div class="px-3 pb-3 bg-light text-center border-top">
+            <a href="#" class="btn btn-sm btn-link text-decoration-none text-muted small btn-download-brochure" data-product="LED Lighting">
+              <i class="bi bi-file-earmark-arrow-down-fill text-danger me-1"></i> Download Technical Datasheet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.2 Smart LED TVs -->
       <div class="col-xl-4 col-md-6 product-grid-item" data-category="appliances">
         <div class="product-card">
           <div class="product-thumb">
@@ -709,7 +791,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
 
-      <!-- 3.2 Air Conditioners -->
+      <!-- 3.3 Air Conditioners -->
       <div class="col-xl-4 col-md-6 product-grid-item" data-category="appliances">
         <div class="product-card">
           <div class="product-thumb">
@@ -750,7 +832,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
 
-      <!-- 3.3 Small Home Appliances (BLDC Fan etc.) -->
+      <!-- 3.4 Small Home Appliances (BLDC Fan etc.) -->
       <div class="col-xl-4 col-md-6 product-grid-item" data-category="appliances">
         <div class="product-card">
           <div class="product-thumb">

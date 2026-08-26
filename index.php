@@ -86,65 +86,38 @@ include __DIR__ . '/includes/header.php';
       <span class="section-tag justify-content-center">Complete Product Portfolio</span>
       <h2 class="section-title">Engineered for Maximum Power &amp; Reliability</h2>
       <p class="section-lead mx-auto">
-        Discover our integrated product portfolio spanning high-efficiency solar systems, uninterrupted power backup, and intelligent home appliances.
+        Discover our integrated product portfolio spanning Wall-Mount LiFePO4 smart storage, premium domestic LED lighting solutions, and heavy-duty E-Rickshaw batteries.
       </p>
     </div>
 
     <div class="row g-4">
-      <!-- Category 1: Solar Solutions -->
+      <!-- Category 1: Wall Mount Lithium Battery -->
       <div class="col-lg-4 col-md-6">
         <div class="category-card">
           <div class="category-card-img-wrapper">
-            <img src="assets/images/products/solar-panel-module.jpg" alt="Solar Solutions by Fuzurra">
-            <span class="category-badge-pill"><i class="bi bi-sun-fill text-warning me-1"></i> Solar Solutions</span>
+            <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.0'; ?>" alt="FUZURRA Wall Mount Lithium Battery 51.2V 100AH LiFePO4">
+            <span class="category-badge-pill"><i class="bi bi-battery-charging text-warning me-1"></i> Wall Mount Lithium</span>
           </div>
           <div class="category-card-body">
-            <h3 class="h4 mb-2">Solar Energy Systems</h3>
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <span class="text-success fw-bold small text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">51.2V 100AH LiFePO4</span>
+              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-1 small">6000+ Cycles</span>
+            </div>
+            <h3 class="h4 mb-2">Wall Mount Lithium Battery</h3>
             <p class="text-muted small mb-3">
-              End-to-end solar generation systems engineered for high performance under all weather conditions.
+              High energy density 51.2V 100Ah LiFePO4 energy storage with 6000+ deep cycles, intelligent smart BMS protection, and wall-mount design. Power your home, power your future.
             </p>
             <div class="category-pill-list">
-              <span class="category-subpill">Solar Panels</span>
-              <span class="category-subpill">Hybrid Inverters</span>
-              <span class="category-subpill">Solar Cables</span>
-              <span class="category-subpill">ACDB / DCDB</span>
-              <span class="category-subpill">MC4 Connectors</span>
-              <span class="category-subpill">Mounting Structures</span>
-            </div>
-            <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
-              <a href="solar-solutions.php" class="text-success fw-bold small">
-                Learn Solutions <i class="bi bi-arrow-right"></i>
-              </a>
-              <a href="products.php?cat=solar" class="btn btn-sm btn-outline-dark rounded-pill px-3">
-                View Products
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Category 2: Power Backup -->
-      <div class="col-lg-4 col-md-6">
-        <div class="category-card">
-          <div class="category-card-img-wrapper">
-            <img src="assets/images/products/lithium-battery.jpg" alt="Power Backup and Batteries by Fuzurra">
-            <span class="category-badge-pill"><i class="bi bi-battery-charging text-success me-1"></i> Power Backup</span>
-          </div>
-          <div class="category-card-body">
-            <h3 class="h4 mb-2">Power Backup &amp; Storage</h3>
-            <p class="text-muted small mb-3">
-              Heavy-duty energy storage solutions delivering seamless, uninterrupted power during outages.
-            </p>
-            <div class="category-pill-list">
-              <span class="category-subpill">Home UPS</span>
-              <span class="category-subpill">Pure Sine Inverters</span>
-              <span class="category-subpill">Tall Tubular Batteries</span>
-              <span class="category-subpill">Lithium LiFePO4</span>
-              <span class="category-subpill">Smart BMS</span>
+              <span class="category-subpill">Safe &amp; Reliable</span>
+              <span class="category-subpill">High Energy Density</span>
+              <span class="category-subpill">Long Life 6000+ Cycles</span>
+              <span class="category-subpill">Smart BMS Protection</span>
+              <span class="category-subpill">Home &amp; Solar Backup</span>
+              <span class="category-subpill">Commercial &amp; Industrial</span>
             </div>
             <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
               <a href="battery-solutions.php" class="text-success fw-bold small">
-                Compare Batteries <i class="bi bi-arrow-right"></i>
+                Explore LiFePO4 <i class="bi bi-arrow-right"></i>
               </a>
               <a href="products.php?cat=power" class="btn btn-sm btn-outline-dark rounded-pill px-3">
                 View Products
@@ -154,29 +127,71 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
 
-      <!-- Category 3: Home Appliances -->
+      <!-- Category 2: Domestic LED Lighting Solutions -->
       <div class="col-lg-4 col-md-6">
         <div class="category-card">
           <div class="category-card-img-wrapper">
-            <img src="assets/images/products/smart-inverter-ac.jpg" alt="Home Appliances by Fuzurra">
-            <span class="category-badge-pill"><i class="bi bi-tv-fill text-info me-1"></i> Smart Appliances</span>
+            <img src="assets/images/products/domestic-led-lighting.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/domestic-led-lighting.png') ? filemtime(__DIR__ . '/assets/images/products/domestic-led-lighting.png') : '2.0'; ?>" alt="FUZURRA Premium Domestic LED Lighting Solutions">
+            <span class="category-badge-pill"><i class="bi bi-lightbulb-fill text-warning me-1"></i> Domestic LED Lighting</span>
           </div>
           <div class="category-card-body">
-            <h3 class="h4 mb-2">Energy Efficient Appliances</h3>
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <span class="text-warning text-dark fw-bold small text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Smarter Lighting</span>
+              <span class="badge bg-warning bg-opacity-25 text-dark rounded-pill px-2 py-1 small">2 Years Warranty</span>
+            </div>
+            <h3 class="h4 mb-2">Domestic LED Lighting</h3>
             <p class="text-muted small mb-3">
-              Next-generation lifestyle electronics built for low power consumption and modern smart homes.
+              Brighten every corner and light up every life with premium energy-saving LED panels, bulbs, battens, spotlights, and floodlights featuring flicker-free eye comfort and surge safety.
             </p>
             <div class="category-pill-list">
-              <span class="category-subpill">Smart LED TVs</span>
-              <span class="category-subpill">Inverter Air Conditioners</span>
-              <span class="category-subpill">BLDC Smart Fans</span>
-              <span class="category-subpill">Small Appliances</span>
+              <span class="category-subpill">LED Panel Lights</span>
+              <span class="category-subpill">LED Bulbs &amp; Battens</span>
+              <span class="category-subpill">Spot &amp; Flood Lights</span>
+              <span class="category-subpill">Flicker-Free Comfort</span>
+              <span class="category-subpill">Surge &amp; Overheat Safety</span>
+              <span class="category-subpill">Made in India</span>
             </div>
             <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
               <a href="products.php?cat=appliances" class="text-success fw-bold small">
-                Explore Appliances <i class="bi bi-arrow-right"></i>
+                Explore Lighting <i class="bi bi-arrow-right"></i>
               </a>
               <a href="products.php?cat=appliances" class="btn btn-sm btn-outline-dark rounded-pill px-3">
+                View Products
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: E-Rickshaw & EV Power Battery -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.0'; ?>" alt="FUZURRA E-Rickshaw Battery Xtreme Power LiFePO4">
+            <span class="category-badge-pill"><i class="bi bi-ev-front-fill text-info me-1"></i> E-Rickshaw Battery</span>
+          </div>
+          <div class="category-card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <span class="text-primary fw-bold small text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Xtreme Power Storage</span>
+              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1 small">3 Years Warranty</span>
+            </div>
+            <h3 class="h4 mb-2">E-Rickshaw Lithium Battery</h3>
+            <p class="text-muted small mb-3">
+              Drive power, drive the future. High-capacity LiFePO4 next-gen battery engineered for extra mileage, fast charging, rugged Indian roads, and consistent reliable daily rides.
+            </p>
+            <div class="category-pill-list">
+              <span class="category-subpill">High Capacity &amp; Mileage</span>
+              <span class="category-subpill">Fast Charging Support</span>
+              <span class="category-subpill">Advanced Smart BMS</span>
+              <span class="category-subpill">LiFePO4 Technology</span>
+              <span class="category-subpill">Made for Indian Roads</span>
+              <span class="category-subpill">Home UPS &amp; Solar Ready</span>
+            </div>
+            <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+              <a href="battery-solutions.php" class="text-success fw-bold small">
+                Compare EV Batteries <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="products.php?cat=power" class="btn btn-sm btn-outline-dark rounded-pill px-3">
                 View Products
               </a>
             </div>

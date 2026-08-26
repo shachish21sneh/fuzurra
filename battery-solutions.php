@@ -45,12 +45,12 @@ include __DIR__ . '/includes/header.php';
         <div class="row g-3">
           <div class="col-6">
             <div class="rounded-4 overflow-hidden shadow-lg border border-white">
-              <img src="assets/images/products/lithium-battery.jpg" alt="Lithium LiFePO4 Battery Storage">
+              <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.0'; ?>" alt="FUZURRA Wall Mount Lithium Battery">
             </div>
           </div>
           <div class="col-6">
             <div class="rounded-4 overflow-hidden shadow-lg border border-white">
-              <img src="assets/images/products/tall-tubular-battery.jpg" alt="Tall Tubular Solar Inverter Battery">
+              <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.0'; ?>" alt="FUZURRA E-Rickshaw LiFePO4 Battery">
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- ==========================================================================
-     DEEP DIVE: LEAD ACID & LITHIUM BATTERIES
+     DEEP DIVE: LEAD ACID, WALL LITHIUM & E-RICKSHAW BATTERIES
      ========================================================================== -->
 <section class="py-5 bg-white">
   <div class="container-fluid px-lg-5 py-4">
@@ -127,13 +127,13 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!-- 2. Lithium Batteries Section -->
-    <div class="row align-items-center g-5">
+    <!-- 2. Wall Mount Lithium Batteries Section -->
+    <div class="row align-items-center g-5 mb-5 pb-5 border-bottom">
       <div class="col-lg-7 order-2 order-lg-1">
         <span class="section-tag" style="color: #059669;">Next-Generation Technology</span>
-        <h2 class="section-title">Smart LiFePO4 Lithium Energy Storage</h2>
+        <h2 class="section-title">Wall Mount Lithium Battery (51.2V 100AH)</h2>
         <p class="text-muted mb-3">
-          Fuzurra’s Lithium Iron Phosphate (LiFePO4) wall-mounted and rack-mounted batteries represent the pinnacle of modern energy storage. Packed with intelligent micro-BMS protection, they deliver exceptional power density and 10+ year longevity.
+          Fuzurra’s 51.2V 100Ah Lithium Iron Phosphate (LiFePO4) wall-mounted smart batteries represent the pinnacle of modern energy storage. Safe &amp; reliable, high energy density, 6000+ life cycles, and built-in Smart BMS protection.
         </p>
         <h5 class="fw-bold text-dark mt-4 mb-2">Key Benefits:</h5>
         <div class="row g-3 mb-4">
@@ -145,8 +145,8 @@ include __DIR__ . '/includes/header.php';
           </div>
           <div class="col-sm-6">
             <div class="p-3 bg-light rounded-3 border">
-              <strong class="d-block text-success mb-1"><i class="bi bi-speedometer2 me-1"></i> High 95%+ Efficiency</strong>
-              <span class="text-muted small">Near-zero internal energy losses during charge and discharge cycles.</span>
+              <strong class="d-block text-success mb-1"><i class="bi bi-shield-check me-1"></i> Smart Active BMS</strong>
+              <span class="text-muted small">Overvoltage, temperature cutoff, and smart cell balancing.</span>
             </div>
           </div>
           <div class="col-sm-6">
@@ -163,18 +163,70 @@ include __DIR__ . '/includes/header.php';
           </div>
         </div>
         <div class="d-flex flex-wrap gap-3">
-          <button type="button" class="btn btn-primary-glow" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="LiFePO4 Lithium Wall Battery" data-category="Lithium Battery Storage (LiFePO4)">
-            Get Lithium Battery Pricing
+          <button type="button" class="btn btn-primary-glow" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="Wall Mount Lithium Battery 51.2V 100AH" data-category="Lithium Battery Storage (LiFePO4)">
+            Get Wall Lithium Pricing
           </button>
         </div>
       </div>
       <div class="col-lg-5 order-1 order-lg-2">
         <div class="rounded-4 overflow-hidden border shadow-sm p-4 bg-light text-center">
-          <img src="assets/images/products/lithium-battery.jpg" alt="LiFePO4 Lithium Battery Wall" class="mx-auto" style="max-height: 280px;">
+          <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.0'; ?>" alt="FUZURRA Wall Mount Lithium Battery 51.2V 100AH LiFePO4" class="mx-auto img-fluid" style="max-height: 320px; object-fit: contain;">
           <div class="mt-3 d-flex justify-content-center gap-2">
             <span class="badge bg-success">Smart Active BMS</span>
-            <span class="badge bg-dark">48V 100Ah (5.12 kWh)</span>
+            <span class="badge bg-dark">51.2V 100Ah (5.12 kWh)</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. E-Rickshaw & Heavy Storage LiFePO4 Section -->
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="rounded-4 overflow-hidden border shadow-sm p-4 bg-light text-center">
+          <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.0'; ?>" alt="FUZURRA E-Rickshaw LiFePO4 Battery Xtreme Power" class="mx-auto img-fluid" style="max-height: 320px; object-fit: contain;">
+          <div class="mt-3 d-flex justify-content-center gap-2">
+            <span class="badge bg-primary">Xtreme Power Storage</span>
+            <span class="badge bg-dark">3 Years Warranty</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <span class="section-tag" style="color: #0284C7;">Drive Power. Drive The Future.</span>
+        <h2 class="section-title">E-Rickshaw &amp; Heavy EV LiFePO4 Battery</h2>
+        <p class="text-muted mb-3">
+          Engineered specifically for Indian road conditions and intensive commercial runs. Fuzurra’s Xtreme Power LiFePO4 batteries deliver ultra-long mileage per charge, fast recharge turnaround, and rugged vibration resistance.
+        </p>
+        <h5 class="fw-bold text-dark mt-4 mb-2">Key Advantages:</h5>
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <strong class="d-block text-primary mb-1"><i class="bi bi-speedometer me-1"></i> High Mileage &amp; Capacity</strong>
+              <span class="text-muted small">Optimized energy density ensures more revenue kilometers per full charge.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <strong class="d-block text-primary mb-1"><i class="bi bi-battery-charging me-1"></i> Fast Rapid Charging</strong>
+              <span class="text-muted small">Significantly reduces daytime charging downtime for commercial drivers.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <strong class="d-block text-primary mb-1"><i class="bi bi-cpu-fill me-1"></i> Advanced Multi-BMS Safety</strong>
+              <span class="text-muted small">Guards against thermal overload, overcurrent, and voltage imbalance.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <strong class="d-block text-primary mb-1"><i class="bi bi-shield-fill-check me-1"></i> Made for Indian Roads</strong>
+              <span class="text-muted small">Reinforced enclosure with superior shock and vibration resistance.</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3">
+          <button type="button" class="btn btn-primary-glow" data-bs-toggle="modal" data-bs-target="#quoteModal" data-product-name="E-Rickshaw LiFePO4 Battery" data-category="Lithium Battery Storage (LiFePO4)">
+            Get E-Rickshaw Battery Quote
+          </button>
         </div>
       </div>
     </div>
