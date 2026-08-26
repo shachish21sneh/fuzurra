@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Fuzurra Industries Pvt. Ltd. - Automated Server Deployment Script
+# Target Directory: /home2/glittl3ql/fuzurra.in
 # ==============================================================================
 
 set -e
 
+TARGET_DIR="/home2/glittl3ql/fuzurra.in"
 REPO_URL="https://github.com/shachish21sneh/fuzurra.git"
 
 echo "========================================================"
-echo "🚀 Deploying Fuzurra Industries to Server"
+echo "🚀 Deploying Fuzurra Industries to $TARGET_DIR"
 echo "========================================================"
+
+mkdir -p "$TARGET_DIR"
+cd "$TARGET_DIR"
 
 if [ -d ".git" ]; then
     echo "🔄 Pulling latest changes from GitHub main branch..."
@@ -17,7 +22,7 @@ if [ -d ".git" ]; then
     git fetch origin main
     git reset --hard origin/main
 else
-    echo "📦 Initializing repository in current directory..."
+    echo "📦 Initializing repository in $TARGET_DIR..."
     git init
     git remote add origin "$REPO_URL"
     git fetch origin main
@@ -38,5 +43,5 @@ touch data/leads.json
 chmod -R 777 data
 
 echo "========================================================"
-echo "✅ Deployment Successful! Fuzurra Industries is live."
+echo "✅ Deployment Successful! Fuzurra Industries is live at https://fuzurra.in/"
 echo "========================================================"
