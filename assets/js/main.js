@@ -141,6 +141,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 6. Hero Subtitle Read More / Read Less Collapse Toggle
+  const heroSubtitle = document.getElementById('heroSubtitle');
+  const heroReadMoreBtn = document.getElementById('heroReadMoreBtn');
+
+  if (heroSubtitle && heroReadMoreBtn) {
+    const toggleHeroText = () => {
+      const isCollapsed = heroSubtitle.classList.contains('collapsed');
+      const textSpan = heroReadMoreBtn.querySelector('.read-more-text');
+      
+      if (isCollapsed) {
+        heroSubtitle.classList.remove('collapsed');
+        heroReadMoreBtn.classList.add('expanded');
+        heroReadMoreBtn.setAttribute('aria-expanded', 'true');
+        if (textSpan) textSpan.textContent = 'Read Less';
+      } else {
+        heroSubtitle.classList.add('collapsed');
+        heroReadMoreBtn.classList.remove('expanded');
+        heroReadMoreBtn.setAttribute('aria-expanded', 'false');
+        if (textSpan) textSpan.textContent = 'Read More';
+      }
+    };
+
+    heroReadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleHeroText();
+    });
+  }
 });
 
 // Universal Toast Helper

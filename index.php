@@ -30,9 +30,15 @@ include __DIR__ . '/includes/header.php';
           Powering a <span class="gradient-text">Brighter &amp; Smarter</span> Future
         </h1>
         
-        <p class="hero-subtitle">
-          Complete Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> — Empowering homes, businesses, and industrial facilities with reliable, energy-efficient, and future-ready solutions, including solar inverters, lithium and lead-acid batteries, battery trolleys, home UPS systems, domestic and commercial lighting solutions, air coolers, water heater, led tv , mobile , earbuds, and other electrical and electronic products. We are committed to delivering quality products, dependable performance, and complete energy and electrical solutions tailored to residential, commercial, and industrial requirements.
-        </p>
+        <div class="hero-subtitle-container mb-4">
+          <p class="hero-subtitle-text collapsed" id="heroSubtitle">
+            Complete Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> — Empowering homes, businesses, and industrial facilities with reliable, energy-efficient, and future-ready solutions, including solar inverters, lithium and lead-acid batteries, battery trolleys, home UPS systems, domestic and commercial lighting solutions, air coolers, water heater, led tv , mobile , earbuds, and other electrical and electronic products. We are committed to delivering quality products, dependable performance, and complete energy and electrical solutions tailored to residential, commercial, and industrial requirements.
+          </p>
+          <button type="button" class="btn-read-more" id="heroReadMoreBtn" aria-expanded="false" aria-controls="heroSubtitle">
+            <span class="read-more-text">Read More</span>
+            <i class="bi bi-chevron-down ms-1"></i>
+          </button>
+        </div>
 
         <!-- CTA Buttons -->
         <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
