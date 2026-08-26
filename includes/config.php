@@ -22,7 +22,7 @@ define('SITE_SALES_EMAIL', 'info@fuzurra.in');
 define('SITE_CORP_OFFICE', 'LGF17 NO.AARZA SQUARE 1, GAUR CITY-1, Sector-4, Greater Noida West, U.P 201318');
 define('SITE_REG_OFFICE', 'G-12/163, First Floor, Ratiya Marg, Sangam Vihar, South Delhi, South Delhi, Delhi, India, 110080');
 define('SITE_ADDRESS', SITE_CORP_OFFICE);
-define('SITE_HOURS', '10:00 AM - 07:00 PM');
+define('SITE_HOURS', 'Mon - Sat: 10:00 AM - 07:00 PM (Sun: Closed)');
 define('SITE_MAPS_EMBED', 'https://maps.google.com/maps?q=Aarza+Square+1+Gaur+City+1+Greater+Noida+West+201318&t=&z=15&ie=UTF8&iwloc=&output=embed');
 
 // Default WhatsApp Pre-filled text
