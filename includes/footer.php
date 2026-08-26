@@ -8,7 +8,7 @@ require_once __DIR__ . '/config.php';
         <!-- Col 1: Brand & Bio -->
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
           <a href="index.php" class="d-inline-block mb-3">
-            <img src="assets/images/logo-white.svg" alt="Fuzurra Industries Logo" height="48">
+            <img src="assets/images/logo.png" alt="Fuzurra - Feel The Excellence" style="height: 48px; width: auto; max-width: 190px; object-fit: contain;">
           </a>
           <p class="text-light-50 small mb-3" style="line-height: 1.7;">
             <strong>Fuzurra Industries Pvt. Ltd.</strong> is a pioneering clean energy and electrical engineering company. We deliver advanced Solar Energy Solutions, Hybrid Inverters, Home UPS, Tall Tubular & Lithium Batteries, and Smart Home Appliances designed for peak efficiency and reliability.
@@ -55,24 +55,26 @@ require_once __DIR__ . '/config.php';
         <div class="col-lg-3 col-md-6">
           <h5 class="footer-heading">Contact Information</h5>
           <div class="footer-contact-item">
+            <i class="bi bi-building-fill text-warning"></i>
+            <div>
+              <strong class="text-white">Corporate Office:</strong><br>
+              <span class="text-light-50 small"><?php echo SITE_CORP_OFFICE; ?></span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
             <i class="bi bi-geo-alt-fill text-warning"></i>
             <div>
-              <strong class="text-white">Head Office:</strong><br>
-              <?php echo SITE_ADDRESS; ?>
+              <strong class="text-white">Registered Office:</strong><br>
+              <span class="text-light-50 small"><?php echo SITE_REG_OFFICE; ?></span>
             </div>
           </div>
           <div class="footer-contact-item">
             <i class="bi bi-telephone-fill text-warning"></i>
             <div>
-              <strong class="text-white">Phone Support:</strong><br>
+              <strong class="text-white">Phone &amp; WhatsApp:</strong><br>
               <a href="tel:<?php echo SITE_PHONE_RAW; ?>" class="text-white"><?php echo SITE_PHONE; ?></a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="bi bi-whatsapp text-success"></i>
-            <div>
-              <strong class="text-white">Direct WhatsApp:</strong><br>
-              <a href="<?php echo WA_LINK_DEFAULT; ?>" target="_blank" class="text-success fw-bold">+91 <?php echo SITE_PHONE_RAW; ?></a>
+              <span class="text-secondary mx-1">|</span>
+              <a href="<?php echo WA_LINK_DEFAULT; ?>" target="_blank" class="text-success fw-bold">Chat Now</a>
             </div>
           </div>
           <div class="footer-contact-item">
@@ -86,7 +88,7 @@ require_once __DIR__ . '/config.php';
             <i class="bi bi-clock-fill text-warning"></i>
             <div>
               <strong class="text-white">Working Hours:</strong><br>
-              <?php echo SITE_HOURS; ?>
+              <span class="text-light-50 small"><?php echo SITE_HOURS; ?></span>
             </div>
           </div>
         </div>

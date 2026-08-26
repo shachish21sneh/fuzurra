@@ -16,7 +16,8 @@ require_once __DIR__ . '/config.php';
     }
   ?>
 
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -67,7 +68,7 @@ require_once __DIR__ . '/config.php';
       <div class="container-fluid px-lg-5">
         <!-- Brand Logo -->
         <a class="navbar-brand d-flex align-items-center" href="index.php">
-          <img src="assets/images/logo.svg" alt="Fuzurra Industries Pvt. Ltd. Logo" width="230" height="50">
+          <img src="assets/images/logo.png" alt="Fuzurra - Feel The Excellence" style="height: 48px; width: auto; max-width: 190px; object-fit: contain;">
         </a>
 
         <!-- Mobile Toggle Button -->
@@ -164,7 +165,7 @@ require_once __DIR__ . '/config.php';
   <!-- Mobile Offcanvas Navigation Drawer -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavOffcanvasLabel">
     <div class="offcanvas-header border-bottom bg-dark text-white">
-      <img src="assets/images/logo-white.svg" alt="Fuzurra Logo" height="40">
+      <img src="assets/images/logo.png" alt="Fuzurra Logo" style="height: 38px; width: auto; object-fit: contain;">
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between p-4">

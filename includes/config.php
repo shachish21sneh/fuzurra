@@ -11,18 +11,22 @@ if (session_status() === PHP_SESSION_NONE) {
 // Company Details
 define('SITE_NAME', 'Fuzurra Industries Pvt. Ltd.');
 define('SITE_SHORT_NAME', 'Fuzurra');
-define('SITE_TAGLINE', 'Powering a Brighter & Smarter Future');
-define('SITE_PHONE', '+91 98765 43210');
-define('SITE_PHONE_RAW', '9876543210');
-define('SITE_WHATSAPP', '919876543210');
-define('SITE_EMAIL', 'info@fuzurra.com');
-define('SITE_SALES_EMAIL', 'sales@fuzurra.com');
-define('SITE_ADDRESS', 'Plot No. 42, Industrial Innovation Zone, Phase-II, New Delhi - 110020, India');
-define('SITE_HOURS', 'Mon - Sat: 9:00 AM - 7:00 PM IST');
-define('SITE_MAPS_EMBED', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d77.0688975472578!3d28.52758200617607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin');
+define('SITE_TAGLINE', 'Feel The Excellence');
+define('SITE_PHONE', '+91 99585 92900');
+define('SITE_PHONE_RAW', '9958592900');
+define('SITE_WHATSAPP', '919958592900');
+define('SITE_EMAIL', 'info@fuzurra.in');
+define('SITE_SALES_EMAIL', 'info@fuzurra.in');
+
+// Corporate & Registered Office Addresses
+define('SITE_CORP_OFFICE', 'LGF17 NO.AARZA SQUARE 1, GAUR CITY-1, Sector-4, Greater Noida West, U.P 201318');
+define('SITE_REG_OFFICE', 'G-12/163, First Floor, Ratiya Marg, Sangam Vihar, South Delhi, South Delhi, Delhi, India, 110080');
+define('SITE_ADDRESS', SITE_CORP_OFFICE);
+define('SITE_HOURS', '10:00 AM - 07:00 PM');
+define('SITE_MAPS_EMBED', 'https://maps.google.com/maps?q=Aarza+Square+1+Gaur+City+1+Greater+Noida+West+201318&t=&z=15&ie=UTF8&iwloc=&output=embed');
 
 // Default WhatsApp Pre-filled text
-define('WA_DEFAULT_MSG', 'Hello Fuzurra Industries, I am interested in your products/solar solutions. Please share more details.');
+define('WA_DEFAULT_MSG', 'Hello Fuzurra Industries, I am interested in your solar solutions and products. Please share more details.');
 define('WA_LINK_DEFAULT', 'https://wa.me/' . SITE_WHATSAPP . '?text=' . urlencode(WA_DEFAULT_MSG));
 
 // Helper: Active Menu Item

@@ -54,41 +54,56 @@ include __DIR__ . '/includes/header.php';
           Connect with our customer support, sales advisors, or channel managers through any of the channels below.
         </p>
 
-        <!-- Company Name & Address Box -->
-        <div class="p-4 bg-light rounded-4 border mb-3">
+        <!-- Corporate Office Box -->
+        <div class="p-4 bg-light rounded-4 border mb-3 shadow-sm">
+          <div class="d-flex align-items-start gap-3">
+            <div class="feature-icon-wrapper feature-icon-gold mb-0">
+              <i class="bi bi-buildings-fill"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-dark mb-1">Corporate Office</h6>
+              <p class="text-muted small mb-0 fw-semibold text-dark">
+                <?php echo SITE_CORP_OFFICE; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registered Office Box -->
+        <div class="p-4 bg-light rounded-4 border mb-3 shadow-sm">
           <div class="d-flex align-items-start gap-3">
             <div class="feature-icon-wrapper feature-icon-green mb-0">
               <i class="bi bi-geo-alt-fill"></i>
             </div>
             <div>
-              <h6 class="fw-bold text-dark mb-1"><?php echo SITE_NAME; ?></h6>
+              <h6 class="fw-bold text-dark mb-1">Registered Office (Reg Off)</h6>
               <p class="text-muted small mb-0">
-                <?php echo SITE_ADDRESS; ?>
+                <?php echo SITE_REG_OFFICE; ?>
               </p>
             </div>
           </div>
         </div>
 
         <!-- Phone & WhatsApp Box -->
-        <div class="p-4 bg-light rounded-4 border mb-3">
+        <div class="p-4 bg-light rounded-4 border mb-3 shadow-sm">
           <div class="d-flex align-items-start gap-3">
-            <div class="feature-icon-wrapper feature-icon-gold mb-0">
+            <div class="feature-icon-wrapper feature-icon-green mb-0">
               <i class="bi bi-telephone-inbound-fill"></i>
             </div>
             <div>
-              <h6 class="fw-bold text-dark mb-1">Phone &amp; WhatsApp</h6>
+              <h6 class="fw-bold text-dark mb-1">Mobile &amp; WhatsApp</h6>
               <p class="text-muted small mb-1">
                 Call: <a href="tel:<?php echo SITE_PHONE_RAW; ?>" class="text-dark fw-bold"><?php echo SITE_PHONE; ?></a>
               </p>
               <p class="text-muted small mb-0">
-                WhatsApp: <a href="<?php echo WA_LINK_DEFAULT; ?>" target="_blank" class="text-success fw-bold">+91 <?php echo SITE_PHONE_RAW; ?></a>
+                WhatsApp: <a href="<?php echo WA_LINK_DEFAULT; ?>" target="_blank" class="text-success fw-bold"><?php echo SITE_PHONE; ?></a>
               </p>
             </div>
           </div>
         </div>
 
         <!-- Email & Hours Box -->
-        <div class="p-4 bg-light rounded-4 border mb-4">
+        <div class="p-4 bg-light rounded-4 border mb-4 shadow-sm">
           <div class="d-flex align-items-start gap-3">
             <div class="feature-icon-wrapper feature-icon-blue mb-0">
               <i class="bi bi-envelope-open-fill"></i>
@@ -96,13 +111,10 @@ include __DIR__ . '/includes/header.php';
             <div>
               <h6 class="fw-bold text-dark mb-1">Email &amp; Business Hours</h6>
               <p class="text-muted small mb-1">
-                Inquiries: <a href="mailto:<?php echo SITE_EMAIL; ?>" class="text-dark fw-bold"><?php echo SITE_EMAIL; ?></a>
+                Email: <a href="mailto:<?php echo SITE_EMAIL; ?>" class="text-dark fw-bold"><?php echo SITE_EMAIL; ?></a>
               </p>
               <p class="text-muted small mb-0">
-                Sales: <a href="mailto:<?php echo SITE_SALES_EMAIL; ?>" class="text-dark fw-bold"><?php echo SITE_SALES_EMAIL; ?></a>
-              </p>
-              <p class="text-muted small mt-2 mb-0">
-                <i class="bi bi-clock me-1 text-warning"></i> <?php echo SITE_HOURS; ?>
+                <i class="bi bi-clock-fill me-1 text-warning"></i> Business Hours: <strong class="text-dark"><?php echo SITE_HOURS; ?></strong>
               </p>
             </div>
           </div>
