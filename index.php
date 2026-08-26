@@ -95,8 +95,7 @@ include __DIR__ . '/includes/header.php';
       <div class="col-lg-4 col-md-6">
         <div class="category-card">
           <div class="category-card-img-wrapper">
-            <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.0'; ?>" alt="FUZURRA Wall Mount Lithium Battery 51.2V 100AH LiFePO4">
-            <span class="category-badge-pill"><i class="bi bi-battery-charging text-warning me-1"></i> Wall Mount Lithium</span>
+            <img src="assets/images/products/wallmount-lithium-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') ? filemtime(__DIR__ . '/assets/images/products/wallmount-lithium-battery.png') : '2.1'; ?>" alt="FUZURRA Wall Mount Lithium Battery 51.2V 100AH LiFePO4">
           </div>
           <div class="category-card-body">
             <div class="d-flex align-items-center justify-content-between mb-1">
@@ -131,8 +130,7 @@ include __DIR__ . '/includes/header.php';
       <div class="col-lg-4 col-md-6">
         <div class="category-card">
           <div class="category-card-img-wrapper">
-            <img src="assets/images/products/domestic-led-lighting.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/domestic-led-lighting.png') ? filemtime(__DIR__ . '/assets/images/products/domestic-led-lighting.png') : '2.0'; ?>" alt="FUZURRA Premium Domestic LED Lighting Solutions">
-            <span class="category-badge-pill"><i class="bi bi-lightbulb-fill text-warning me-1"></i> Domestic LED Lighting</span>
+            <img src="assets/images/products/domestic-led-lighting.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/domestic-led-lighting.png') ? filemtime(__DIR__ . '/assets/images/products/domestic-led-lighting.png') : '2.1'; ?>" alt="FUZURRA Premium Domestic LED Lighting Solutions">
           </div>
           <div class="category-card-body">
             <div class="d-flex align-items-center justify-content-between mb-1">
@@ -167,8 +165,7 @@ include __DIR__ . '/includes/header.php';
       <div class="col-lg-4 col-md-6">
         <div class="category-card">
           <div class="category-card-img-wrapper">
-            <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.0'; ?>" alt="FUZURRA E-Rickshaw Battery Xtreme Power LiFePO4">
-            <span class="category-badge-pill"><i class="bi bi-ev-front-fill text-info me-1"></i> E-Rickshaw Battery</span>
+            <img src="assets/images/products/erickshaw-battery.png?v=<?php echo file_exists(__DIR__ . '/assets/images/products/erickshaw-battery.png') ? filemtime(__DIR__ . '/assets/images/products/erickshaw-battery.png') : '2.1'; ?>" alt="FUZURRA E-Rickshaw Battery Xtreme Power LiFePO4">
           </div>
           <div class="category-card-body">
             <div class="d-flex align-items-center justify-content-between mb-1">
