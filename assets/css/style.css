@@ -165,10 +165,13 @@ img {
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--secondary-slate);
-  padding: 10px 14px !important;
+  padding: 8px 12px !important;
   border-radius: var(--radius-sm);
   transition: var(--transition-fast);
   position: relative;
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
 }
 
 .navbar-nav .nav-link:hover,

@@ -82,7 +82,7 @@ require_once __DIR__ . '/config.php';
               <a class="nav-link <?php echo isActivePage('index'); ?>" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('about'); ?>" href="about.php">About Us</a>
+              <a class="nav-link <?php echo isActivePage('about'); ?>" href="about.php">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php echo isActivePage('products'); ?>" href="products.php">Products</a>
@@ -137,10 +137,10 @@ require_once __DIR__ . '/config.php';
               <a class="nav-link <?php echo isActivePage('services'); ?>" href="services.php">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('dealer'); ?>" href="dealer.php">Dealer / Distributor</a>
+              <a class="nav-link <?php echo isActivePage('dealer'); ?>" href="dealer.php">Dealers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php echo isActivePage('contact'); ?>" href="contact.php">Contact Us</a>
+              <a class="nav-link <?php echo isActivePage('contact'); ?>" href="contact.php">Contact</a>
             </li>
           </ul>
 
@@ -176,7 +176,7 @@ require_once __DIR__ . '/config.php';
         </li>
         <li class="nav-item">
           <a class="nav-link <?php echo isActivePage('about'); ?>" href="about.php">
-            <i class="bi bi-building me-2 text-success"></i> About Us
+            <i class="bi bi-building me-2 text-success"></i> About
           </a>
         </li>
         <li class="nav-item">
@@ -217,12 +217,12 @@ require_once __DIR__ . '/config.php';
         </li>
         <li class="nav-item">
           <a class="nav-link <?php echo isActivePage('dealer'); ?>" href="dealer.php">
-            <i class="bi bi-briefcase-fill me-2 text-primary"></i> Dealer / Distributor
+            <i class="bi bi-briefcase-fill me-2 text-primary"></i> Dealers
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?php echo isActivePage('contact'); ?>" href="contact.php">
-            <i class="bi bi-geo-alt-fill me-2 text-danger"></i> Contact Us
+            <i class="bi bi-geo-alt-fill me-2 text-danger"></i> Contact
           </a>
         </li>
       </ul>
