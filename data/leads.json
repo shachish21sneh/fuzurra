@@ -28,5 +28,21 @@
         "product": "Solar Panels (Mono PERC \/ Bifacial), Hybrid",
         "message": "Interested in exclusive district distributorship",
         "ip": "127.0.0.1"
+    },
+    {
+        "lead_id": "FUZ-1E5392F9",
+        "timestamp": "2026-08-26 12:26:03",
+        "form_type": "contact_page",
+        "full_name": "Test Customer",
+        "company": "",
+        "mobile": "9958592900",
+        "email": "test@example.com",
+        "city": "Noida",
+        "state": "",
+        "business_type": "",
+        "category": "",
+        "product": "Solar Hybrid Inverters",
+        "message": "Testing SMTP lead delivery",
+        "ip": "127.0.0.1"
     }
 ]

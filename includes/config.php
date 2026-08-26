@@ -29,6 +29,16 @@ define('SITE_MAPS_EMBED', 'https://maps.google.com/maps?q=Aarza+Square+1+Gaur+Ci
 define('WA_DEFAULT_MSG', 'Hello Fuzurra Industries, I am interested in your solar solutions and products. Please share more details.');
 define('WA_LINK_DEFAULT', 'https://wa.me/' . SITE_WHATSAPP . '?text=' . urlencode(WA_DEFAULT_MSG));
 
+// SMTP Outgoing Mail Configuration
+define('SMTP_HOST', 'mail.fuzurra.in');
+define('SMTP_PORT', 465);
+define('SMTP_SECURE', 'ssl');
+define('SMTP_USER', 'info@fuzurra.in');
+define('SMTP_PASS', getenv('SMTP_PASS') ?: (defined('LOCAL_SMTP_PASS') ? LOCAL_SMTP_PASS : 'Info@#007'));
+define('SMTP_FROM_EMAIL', 'info@fuzurra.in');
+define('SMTP_FROM_NAME', 'Fuzurra Industries Pvt. Ltd.');
+define('NOTIFICATION_RECIPIENT_EMAIL', 'krishnagzp@gmail.com');
+
 // Helper: Active Menu Item
 function isActivePage($pageName) {
     $current = basename($_SERVER['PHP_SELF'], '.php');

@@ -74,8 +74,11 @@ if (empty($fullName) || empty($mobile)) {
     exit;
 }
 
-// 5. Store Lead in Local CSV / JSON Log (for demonstration and record persistence)
+// 5. Generate Lead ID and Store Record
+$leadId = 'FUZ-' . strtoupper(substr(md5(uniqid(time(), true)), 0, 8));
+
 $leadRecord = [
+    'lead_id' => $leadId,
     'timestamp' => date('Y-m-d H:i:s'),
     'form_type' => $formType,
     'full_name' => $fullName,
@@ -104,7 +107,11 @@ if (file_exists($leadsFile)) {
 $existingLeads[] = $leadRecord;
 @file_put_contents($leadsFile, json_encode($existingLeads, JSON_PRETTY_PRINT));
 
-// 6. Custom success response based on form type
+// 6. Send Email Notification via Authenticated SMTP
+require_once __DIR__ . '/../includes/mailer.php';
+$mailResult = FuzurraMailer::sendEnquiryNotification($leadRecord);
+
+// 7. Custom success response based on form type
 $responseMessage = 'Thank you! Your enquiry has been received. A Fuzurra technical advisor will contact you within 30 minutes.';
 
 if ($formType === 'dealer_application') {
@@ -116,5 +123,6 @@ if ($formType === 'dealer_application') {
 echo json_encode([
     'success' => true,
     'message' => $responseMessage,
-    'lead_id' => 'FUZ-' . strtoupper(substr(md5(uniqid()), 0, 8))
+    'lead_id' => $leadId,
+    'mail_dispatched' => $mailResult['success'] ?? false
 ]);

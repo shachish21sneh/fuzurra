@@ -1,0 +1,6 @@
+# Secrets & Local Config
+includes/config.local.php
+.env
+
+# Data logs
+data/leads.json
