@@ -168,6 +168,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (label) label.textContent = 'Read More';
     }
   };
+
+  // 7. Interactive Solar Flow Step Card Hover Switcher
+  const flowCards = document.querySelectorAll('.flow-step-card');
+  if (flowCards.length > 0) {
+    flowCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        flowCards.forEach(c => c.classList.remove('active-pulse'));
+        card.classList.add('active-pulse');
+      });
+    });
+  }
 });
 
 // Universal Toast Helper

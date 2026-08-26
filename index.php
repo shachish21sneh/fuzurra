@@ -228,37 +228,37 @@ include __DIR__ . '/includes/header.php';
       <img src="assets/images/diagrams/solar-system-flow.svg" alt="Complete Solar System Flow Diagram - Fuzurra Industries" class="mx-auto" style="max-width: 100%; height: auto;">
       
       <!-- Quick Stage Explanations -->
-      <div class="row g-3 mt-4 text-start">
+      <div class="row g-3 mt-4 text-start" id="solarFlowCards">
         <div class="col-md">
-          <div class="flow-step-card">
+          <div class="flow-step-card" data-step="1">
             <div class="flow-step-number">1</div>
             <h6 class="text-white fw-bold mb-1">Solar PV Panel</h6>
             <p class="small text-light-50 mb-0">Generates clean Direct Current (DC) from sunlight.</p>
           </div>
         </div>
         <div class="col-md">
-          <div class="flow-step-card">
+          <div class="flow-step-card" data-step="2">
             <div class="flow-step-number">2</div>
             <h6 class="text-white fw-bold mb-1">DCDB Box</h6>
             <p class="small text-light-50 mb-0">Surge arrestors &amp; DC fuses protect against voltage spikes.</p>
           </div>
         </div>
         <div class="col-md">
-          <div class="flow-step-card active-pulse">
-            <div class="flow-step-number bg-success">3</div>
+          <div class="flow-step-card active-pulse" data-step="3">
+            <div class="flow-step-number">3</div>
             <h6 class="text-white fw-bold mb-1">Hybrid Inverter</h6>
             <p class="small text-light-50 mb-0">Converts DC into clean Alternating Current (AC) with MPPT.</p>
           </div>
         </div>
         <div class="col-md">
-          <div class="flow-step-card">
+          <div class="flow-step-card" data-step="4">
             <div class="flow-step-number">4</div>
             <h6 class="text-white fw-bold mb-1">ACDB Box</h6>
             <p class="small text-light-50 mb-0">Distributes safe AC power and guards grid connection.</p>
           </div>
         </div>
         <div class="col-md">
-          <div class="flow-step-card">
+          <div class="flow-step-card" data-step="5">
             <div class="flow-step-number">5</div>
             <h6 class="text-white fw-bold mb-1">Home &amp; Business</h6>
             <p class="small text-light-50 mb-0">Zero-electricity bill powering lights, ACs, and appliances.</p>
