@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="#F8FAFC" />
+  
+  <g filter="url(#boxShadow)" transform="translate(60, 30)">
+    <!-- Main Enclosure Outer Body -->
+    <rect x="0" y="0" width="280" height="230" rx="12" fill="url(#boxGrad)" stroke="#CBD5E1" stroke-width="2" />
+    
+    <!-- Transparent Smoked Polycarbonate Window / Door -->
+    <rect x="25" y="30" width="230" height="150" rx="8" fill="#0F172A" fill-opacity="0.06" stroke="#94A3B8" stroke-width="1.5" />
+    <rect x="35" y="40" width="210" height="130" rx="6" fill="#1E293B" />
+    
+    <!-- DIN Rail Breakers Inside -->
+    <!-- SPD (Surge Protection Device) -->
+    <g transform="translate(50, 55)">
+      <rect width="40" height="90" rx="4" fill="#DC2626" />
+      <rect x="6" y="15" width="28" height="25" rx="2" fill="#16A34A" /> <!-- Green indicator -->
+      <text x="20" y="32" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">OK</text>
+      <text x="20" y="65" fill="#FFFFFF" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">SPD</text>
+      <text x="20" y="78" fill="#FFFFFF" font-family="sans-serif" font-size="7" text-anchor="middle">1000V DC</text>
+    </g>
+
+    <!-- DC MCB / Rotary Isolator Switch -->
+    <g transform="translate(105, 55)">
+      <rect width="50" height="90" rx="4" fill="#334155" />
+      <!-- Toggle Switches -->
+      <rect x="10" y="25" width="12" height="30" rx="3" fill="#059669" />
+      <rect x="28" y="25" width="12" height="30" rx="3" fill="#059669" />
+      <text x="25" y="75" fill="#FFFFFF" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">DC MCB</text>
+    </g>
+
+    <!-- DC Fuse Holders -->
+    <g transform="translate(170, 55)">
+      <rect width="30" height="90" rx="4" fill="#475569" />
+      <rect x="8" y="20" width="14" height="40" rx="2" fill="#F59E0B" />
+      <text x="15" y="75" fill="#FFFFFF" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle">FUSE</text>
+    </g>
+    
+    <g transform="translate(205, 55)">
+      <rect width="30" height="90" rx="4" fill="#475569" />
+      <rect x="8" y="20" width="14" height="40" rx="2" fill="#F59E0B" />
+      <text x="15" y="75" fill="#FFFFFF" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle">FUSE</text>
+    </g>
+
+    <!-- Waterproof Cable Glands at bottom -->
+    <rect x="50" y="225" width="18" height="15" rx="3" fill="#64748B" />
+    <rect x="90" y="225" width="18" height="15" rx="3" fill="#64748B" />
+    <rect x="170" y="225" width="18" height="15" rx="3" fill="#64748B" />
+    <rect x="210" y="225" width="18" height="15" rx="3" fill="#64748B" />
+
+    <!-- Lock latch -->
+    <circle cx="260" cy="105" r="5" fill="#64748B" />
+  </g>
+
+  <!-- Spec Badge -->
+  <g transform="translate(20, 20)">
+    <rect width="130" height="28" rx="14" fill="#059669" />
+    <text x="65" y="18" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">IP65 ACDB / DCDB</text>
+  </g>
+</svg>

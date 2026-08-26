@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" fill="none" class="fuzurra-logo">
+  <defs>
+    <linearGradient id="sunGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+  </defs>
+
+  <!-- High-Tech Energy & Solar Emblem -->
+  <g transform="translate(10, 5)">
+    <polygon points="30,2 54,16 54,44 30,58 6,44 6,16" fill="#1E293B" stroke="url(#sunGradW)" stroke-width="2.5" />
+    <path d="M30 10 L30 18 M30 42 L30 50 M14 20 L20 24 M40 36 L46 40 M14 40 L20 36 M40 24 L46 20" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" />
+    <path d="M26 18 L36 30 L28 32 L34 44 L22 32 L30 30 Z" fill="url(#sunGradW)" />
+    <circle cx="30" cy="30" r="3" fill="#FFFFFF" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(75, 12)">
+    <text x="0" y="30" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="1.5" fill="#FFFFFF">
+      FUZURRA
+    </text>
+    <text x="0" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="10.5" letter-spacing="4" fill="#34D399">
+      INDUSTRIES PVT. LTD.
+    </text>
+    <circle cx="160" cy="20" r="3.5" fill="#FBBF24" />
+  </g>
+</svg>

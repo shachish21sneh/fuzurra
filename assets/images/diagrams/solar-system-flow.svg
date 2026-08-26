@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" fill="none" class="solar-flow-diagram">
+  <defs>
+    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="50%" stop-color="#1C2541" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="sunGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="dcLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="acLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#10B981" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <rect width="1100" height="420" rx="24" fill="url(#flowBg)" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Subtle background grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.4" />
+  </pattern>
+  <rect width="1100" height="420" rx="24" fill="url(#grid)" />
+
+  <!-- Animated Connection Paths -->
+  <!-- 1. Solar Panels to DCDB (DC Power) -->
+  <path d="M 180 180 L 290 180" stroke="url(#dcLineGrad)" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6" class="circuit-wire" />
+  
+  <!-- 2. DCDB to Inverter (Protected DC Power) -->
+  <path d="M 410 180 L 510 180" stroke="url(#dcLineGrad)" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6" class="circuit-wire" />
+  
+  <!-- 3. Inverter to ACDB (Converted Clean AC Power) -->
+  <path d="M 640 180 L 740 180" stroke="url(#acLineGrad)" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6" class="circuit-wire" />
+  
+  <!-- 4. ACDB to Home/Business Grid (Clean Usable Power) -->
+  <path d="M 860 180 L 970 180" stroke="url(#acLineGrad)" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6" class="circuit-wire" />
+
+  <!-- 5. Inverter to Battery Storage (Bidirectional) -->
+  <path d="M 575 250 L 575 320" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4" class="circuit-wire" />
+
+  <!-- STAGE 1: SOLAR PANELS -->
+  <g transform="translate(60, 100)" class="flow-node">
+    <rect width="120" height="150" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2" />
+    <!-- Mini Solar Cells -->
+    <rect x="15" y="15" width="40" height="45" rx="3" fill="#0284C7" stroke="#38BDF8" stroke-width="0.8" />
+    <rect x="65" y="15" width="40" height="45" rx="3" fill="#0284C7" stroke="#38BDF8" stroke-width="0.8" />
+    <rect x="15" y="68" width="40" height="45" rx="3" fill="#0284C7" stroke="#38BDF8" stroke-width="0.8" />
+    <rect x="65" y="68" width="40" height="45" rx="3" fill="#0284C7" stroke="#38BDF8" stroke-width="0.8" />
+    
+    <text x="60" y="132" fill="#F8FAFC" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">1. SOLAR PV</text>
+    <text x="60" y="144" fill="#FBBF24" font-family="sans-serif" font-size="9" text-anchor="middle">Generates DC</text>
+  </g>
+
+  <!-- STAGE 2: DCDB -->
+  <g transform="translate(290, 100)" class="flow-node">
+    <rect width="120" height="150" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="2" />
+    <rect x="25" y="25" width="70" height="85" rx="6" fill="#0F172A" stroke="#475569" />
+    <rect x="35" y="40" width="20" height="35" rx="2" fill="#DC2626" />
+    <rect x="65" y="40" width="20" height="35" rx="2" fill="#10B981" />
+    
+    <text x="60" y="132" fill="#F8FAFC" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">2. DCDB BOX</text>
+    <text x="60" y="144" fill="#F87171" font-family="sans-serif" font-size="9" text-anchor="middle">Surge & Fuse Safety</text>
+  </g>
+
+  <!-- STAGE 3: HYBRID INVERTER -->
+  <g transform="translate(510, 85)" class="flow-node">
+    <rect width="130" height="175" rx="16" fill="#1E293B" stroke="#10B981" stroke-width="2.5" filter="url(#nodeGlow)" />
+    <!-- LCD Display Screen -->
+    <rect x="20" y="20" width="90" height="55" rx="6" fill="#064E3B" stroke="#34D399" stroke-width="1.5" />
+    <text x="65" y="42" fill="#34D399" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">DC ➔ AC CONV</text>
+    <text x="65" y="58" fill="#FBBF24" font-family="monospace" font-size="9" text-anchor="middle">98.6% EFFICIENCY</text>
+    
+    <circle cx="65" cy="100" r="14" fill="#059669" />
+    <path d="M 58 100 L 63 94 L 67 106 L 72 100" stroke="#FFFFFF" stroke-width="2" fill="none" />
+    
+    <text x="65" y="145" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">3. INVERTER</text>
+    <text x="65" y="160" fill="#34D399" font-family="sans-serif" font-size="9" text-anchor="middle">Intelligent MPPT</text>
+  </g>
+
+  <!-- STAGE 4: ACDB -->
+  <g transform="translate(740, 100)" class="flow-node">
+    <rect width="120" height="150" rx="14" fill="#1E293B" stroke="#06B6D4" stroke-width="2" />
+    <rect x="25" y="25" width="70" height="85" rx="6" fill="#0F172A" stroke="#475569" />
+    <rect x="35" y="40" width="50" height="25" rx="2" fill="#0284C7" />
+    <rect x="35" y="70" width="50" height="25" rx="2" fill="#059669" />
+
+    <text x="60" y="132" fill="#F8FAFC" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">4. ACDB BOX</text>
+    <text x="60" y="144" fill="#38BDF8" font-family="sans-serif" font-size="9" text-anchor="middle">AC Surge Protection</text>
+  </g>
+
+  <!-- STAGE 5: HOME / BUSINESS APPLIANCES -->
+  <g transform="translate(950, 100)" class="flow-node">
+    <rect width="120" height="150" rx="14" fill="#1E293B" stroke="#FBBF24" stroke-width="2" />
+    <!-- House & Factory icon -->
+    <path d="M 60 25 L 95 55 L 25 55 Z" fill="#F59E0B" />
+    <rect x="35" y="55" width="50" height="50" rx="2" fill="#334155" />
+    <rect x="52" y="75" width="16" height="30" fill="#FBBF24" />
+    
+    <text x="60" y="132" fill="#F8FAFC" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" text-anchor="middle">5. HOME / GRID</text>
+    <text x="60" y="144" fill="#FBBF24" font-family="sans-serif" font-size="9" text-anchor="middle">Zero Bill Power</text>
+  </g>
+
+  <!-- OPTIONAL BATTERY STORAGE AT BOTTOM -->
+  <g transform="translate(500, 315)">
+    <rect width="150" height="75" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8" />
+    <rect x="15" y="15" width="120" height="25" rx="4" fill="#0F172A" />
+    <rect x="20" y="20" width="80" height="15" rx="2" fill="#0284C7" />
+    <text x="75" y="58" fill="#F8FAFC" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" text-anchor="middle">LITHIUM / LEAD ACID</text>
+    <text x="75" y="70" fill="#38BDF8" font-family="sans-serif" font-size="8.5" text-anchor="middle">24/7 Power Backup</text>
+  </g>
+
+  <!-- Header Overlay inside diagram -->
+  <g transform="translate(30, 25)">
+    <rect width="260" height="30" rx="15" fill="#059669" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="130" y="20" fill="#34D399" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">⚡ COMPLETE SOLAR SYSTEM FLOW</text>
+  </g>
+</svg>

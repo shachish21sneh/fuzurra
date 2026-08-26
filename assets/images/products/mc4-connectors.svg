@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="mc4Body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="shadowMC4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="#F8FAFC" />
+  
+  <g filter="url(#shadowMC4)" transform="translate(45, 70)">
+    <!-- Male Connector Body -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="20" width="40" height="24" rx="4" fill="#1E293B" />
+      <rect x="35" y="16" width="30" height="32" rx="4" fill="#0F172A" />
+      <rect x="60" y="20" width="70" height="24" rx="4" fill="url(#mc4Body)" />
+      <!-- Locking clips -->
+      <path d="M 125 18 L 145 18 L 140 24 L 125 24 Z" fill="#475569" />
+      <path d="M 125 46 L 145 46 L 140 40 L 125 40 Z" fill="#475569" />
+      <!-- Gold contact pin protruding -->
+      <rect x="130" y="28" width="30" height="8" rx="2" fill="url(#pinGrad)" />
+      <!-- Waterproof rubber seal ring -->
+      <rect x="90" y="18" width="6" height="28" rx="2" fill="#DC2626" />
+    </g>
+
+    <!-- Female Connector Body (aligned to plug in) -->
+    <g transform="translate(160, 30)">
+      <rect x="10" y="14" width="75" height="36" rx="6" fill="url(#mc4Body)" />
+      <!-- Locking slots -->
+      <rect x="15" y="10" width="20" height="6" rx="2" fill="#64748B" />
+      <rect x="15" y="48" width="20" height="6" rx="2" fill="#64748B" />
+      <rect x="80" y="16" width="30" height="32" rx="4" fill="#0F172A" />
+      <rect x="105" y="20" width="40" height="24" rx="4" fill="#1E293B" />
+      <!-- Blue waterproof seal ring -->
+      <rect x="50" y="12" width="6" height="40" rx="2" fill="#0284C7" />
+    </g>
+
+    <!-- Connection spark glow effect -->
+    <circle cx="150" cy="62" r="14" fill="#F59E0B" fill-opacity="0.25" />
+    <circle cx="150" cy="62" r="4" fill="#F59E0B" />
+  </g>
+
+  <!-- Spec Badge -->
+  <g transform="translate(20, 20)">
+    <rect width="120" height="28" rx="14" fill="#0F172A" />
+    <text x="60" y="18" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">IP68 WATERPROOF</text>
+  </g>
+</svg>

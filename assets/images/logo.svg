@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" fill="none" class="fuzurra-logo">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="glowGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- High-Tech Energy & Solar Emblem -->
+  <g transform="translate(10, 5)">
+    <!-- Hexagonal Solar Framework -->
+    <polygon points="30,2 54,16 54,44 30,58 6,44 6,16" fill="#0B132B" stroke="url(#sunGrad)" stroke-width="2.5" />
+    
+    <!-- Stylized Sun & Lightning Core -->
+    <path d="M30 10 L30 18 M30 42 L30 50 M14 20 L20 24 M40 36 L46 40 M14 40 L20 36 M40 24 L46 20" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Central Solar Infinity/Energy Pulse -->
+    <path d="M26 18 L36 30 L28 32 L34 44 L22 32 L30 30 Z" fill="url(#sunGrad)" filter="url(#logoGlow)" />
+    <circle cx="30" cy="30" r="3" fill="#FFFFFF" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(75, 12)">
+    <text x="0" y="30" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="1.5" fill="#0F172A">
+      FUZURRA
+    </text>
+    <text x="0" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="10.5" letter-spacing="4" fill="#059669">
+      INDUSTRIES PVT. LTD.
+    </text>
+    <!-- Accent Dot -->
+    <circle cx="160" cy="20" r="3.5" fill="#F59E0B" />
+  </g>
+</svg>

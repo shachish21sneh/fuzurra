@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2026-08-26 06:17:58",
+        "form_type": "contact_page",
+        "full_name": "Test User",
+        "company": "",
+        "mobile": "9876543210",
+        "email": "test@example.com",
+        "city": "New Delhi",
+        "state": "",
+        "business_type": "",
+        "category": "",
+        "product": "Solar Hybrid Inverters",
+        "message": "Testing automated inquiry submission",
+        "ip": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-08-26 06:18:07",
+        "form_type": "dealer_application",
+        "full_name": "Anil Mehta",
+        "company": "Mehta Solar ",
+        "mobile": "9811122233",
+        "email": "anil@mehtasolar.in",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "business_type": "Solar EPC Contractor \/ Installer",
+        "category": "",
+        "product": "Solar Panels (Mono PERC \/ Bifacial), Hybrid",
+        "message": "Interested in exclusive district distributorship",
+        "ip": "127.0.0.1"
+    }
+]
