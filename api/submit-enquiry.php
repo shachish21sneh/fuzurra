@@ -118,6 +118,10 @@ if ($formType === 'dealer_application') {
     $responseMessage = 'Thank you for applying to become a Fuzurra Authorized Channel Partner! Our National Head of Distribution will review your profile and reach out within 24 hours.';
 } else if ($formType === 'pm_surya_ghar') {
     $responseMessage = 'Your PM Surya Ghar subsidy application assistance request has been registered. Our solar consultant will verify your rooftop feasibility shortly.';
+} else if ($formType === 'service_booking' || $formType === 'service_enquiry') {
+    $responseMessage = 'Your service appointment request has been scheduled. A Fuzurra certified solar engineer will contact you to confirm timing.';
+} else if ($formType === 'quote_request' || $formType === 'quick_quote_modal') {
+    $responseMessage = 'Thank you! Your official quotation request has been received. Our technical sizing specialist will prepare your proposal within 30 minutes.';
 }
 
 echo json_encode([

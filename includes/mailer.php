@@ -222,6 +222,7 @@ class FuzurraMailer
         switch ($type) {
             case 'contact_page':
                 return 'Contact Page Enquiry';
+            case 'quote_request':
             case 'quick_quote_modal':
             case 'quick_quote':
                 return 'Instant Quote Request';
@@ -229,8 +230,9 @@ class FuzurraMailer
                 return 'Channel Partner / Dealership Application';
             case 'pm_surya_ghar':
                 return 'PM Surya Ghar Subsidy Consultation';
+            case 'service_booking':
             case 'service_enquiry':
-                return 'Service & AMC Request';
+                return 'Service & Maintenance Booking';
             default:
                 return 'General Lead Enquiry';
         }
