@@ -36,7 +36,7 @@ require_once __DIR__ . '/config.php';
       <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-4">
           <div class="topbar-badge">
-            <span class="dot"></span> PM Surya Ghar Authorized Solutions
+            <span class="dot"></span> <?php echo SITE_REG_OFFICE; ?>
           </div>
           <div class="d-flex align-items-center gap-2">
             <i class="bi bi-clock-history text-success"></i>
