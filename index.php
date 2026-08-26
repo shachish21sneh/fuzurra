@@ -225,7 +225,7 @@ include __DIR__ . '/includes/header.php';
 
     <!-- Solar Flow Interactive Diagram Box -->
     <div class="solar-flow-wrapper text-center my-4">
-      <img src="assets/images/diagrams/solar-system-flow.svg" alt="Complete Solar System Flow Diagram - Fuzurra Industries" class="mx-auto" style="max-width: 100%; height: auto;">
+      <img src="assets/images/diagrams/solar-system-flow.svg?v=<?php echo file_exists(__DIR__ . '/assets/images/diagrams/solar-system-flow.svg') ? filemtime(__DIR__ . '/assets/images/diagrams/solar-system-flow.svg') : '2.0'; ?>" alt="Complete Solar System Flow Diagram - Fuzurra Industries" class="mx-auto" style="max-width: 100%; height: auto;">
       
       <!-- Quick Stage Explanations -->
       <div class="row g-3 mt-4 text-start" id="solarFlowCards">

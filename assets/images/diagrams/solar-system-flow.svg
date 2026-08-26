@@ -32,23 +32,39 @@
       <stop offset="100%" stop-color="#0F172A" />
     </linearGradient>
 
-    <!-- Glow Filter -->
+    <!-- Glow Filters -->
     <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#10B981" flood-opacity="0.45" />
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#10B981" flood-opacity="0.5" />
     </filter>
     
     <filter id="amberGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#F59E0B" flood-opacity="0.45" />
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#F59E0B" flood-opacity="0.5" />
     </filter>
+
+    <filter id="arrowGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#10B981" flood-opacity="0.8" />
+    </filter>
+
+    <filter id="arrowGlowRed" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#EF4444" flood-opacity="0.8" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrowDC" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#EF4444" />
+    </marker>
+    <marker id="arrowAC" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981" />
+    </marker>
 
     <style>
       @keyframes pulseFlow {
-        from { stroke-dashoffset: 32; }
+        from { stroke-dashoffset: 40; }
         to { stroke-dashoffset: 0; }
       }
-      @keyframes sunRays {
-        0%, 100% { transform: scale(1); opacity: 0.8; }
-        50% { transform: scale(1.1); opacity: 1; }
+      @keyframes pulseArrowGlow {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.15); opacity: 1; }
       }
       .anim-flow {
         stroke-dasharray: 8 6;
@@ -64,21 +80,24 @@
       .diagram-node:hover {
         transform: translateY(-4px);
       }
+      .flow-arrow-head {
+        animation: pulseArrowGlow 1.5s ease-in-out infinite;
+      }
     </style>
   </defs>
 
   <!-- Container Box -->
   <rect width="1100" height="420" rx="20" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2" />
   
-  <!-- Subtle Blueprint Tech Grid -->
+  <!-- Blueprint Tech Grid -->
   <g opacity="0.12">
     <line x1="0" y1="70" x2="1100" y2="70" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
     <line x1="0" y1="180" x2="1100" y2="180" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
     <line x1="0" y1="290" x2="1100" y2="290" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
-    <line x1="180" y1="0" x2="180" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
-    <line x1="390" y1="0" x2="390" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
-    <line x1="610" y1="0" x2="610" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
-    <line x1="830" y1="0" x2="830" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="195" y1="0" x2="195" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="405" y1="0" x2="405" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="635" y1="0" x2="635" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="845" y1="0" x2="845" y2="420" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" />
   </g>
 
   <!-- Header Badge Inside Diagram -->
@@ -88,31 +107,82 @@
     <text x="32" y="21" fill="#34D399" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">⚡ COMPLETE SYSTEM ENERGY FLOW</text>
   </g>
 
-  <!-- POWER CONNECTING BUS WIRES -->
-  <!-- Wire 1: Solar Panels to DCDB (DC Power) -->
-  <path d="M 195 180 L 285 180" stroke="url(#dcGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
-  <polygon points="288,180 276,174 276,186" fill="#EF4444" />
-  <text x="240" y="165" fill="#F59E0B" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">DC POWER</text>
+  <!-- ==================== PROMINENT ARROWS & CONNECTORS ==================== -->
 
-  <!-- Wire 2: DCDB to Inverter (Protected DC) -->
-  <path d="M 405 180 L 495 180" stroke="url(#dcGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
-  <polygon points="498,180 486,174 486,186" fill="#EF4444" />
-  <text x="450" y="165" fill="#F87171" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">SURGE PROTECTED</text>
+  <!-- ARROW 1: Solar Panels -> DCDB Box -->
+  <g>
+    <!-- Label Pill Above Arrow -->
+    <rect x="202" y="142" width="76" height="20" rx="10" fill="#0B132B" stroke="#F59E0B" stroke-width="1" />
+    <text x="240" y="156" fill="#FBBF24" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" text-anchor="middle">DC POWER</text>
+    
+    <!-- Base Solid Background Line -->
+    <line x1="195" y1="180" x2="265" y2="180" stroke="#78350F" stroke-width="6" stroke-linecap="round" />
+    <!-- Animated Energy Flow -->
+    <line x1="195" y1="180" x2="265" y2="180" stroke="url(#dcGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
+    <!-- Bold Luminous Arrow Head -->
+    <polygon points="280,180 262,170 262,190" fill="#F59E0B" filter="url(#arrowGlowRed)" />
+    <!-- Inner Arrow Accent -->
+    <polygon points="278,180 264,173 264,187" fill="#FFFFFF" />
+  </g>
 
-  <!-- Wire 3: Inverter to ACDB (Clean 230V AC) -->
-  <path d="M 635 180 L 725 180" stroke="url(#acGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
-  <polygon points="728,180 716,174 716,186" fill="#10B981" />
-  <text x="680" y="165" fill="#34D399" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">230V AC CONVERTED</text>
+  <!-- ARROW 2: DCDB Box -> Hybrid Inverter -->
+  <g>
+    <!-- Label Pill Above Arrow -->
+    <rect x="412" y="142" width="76" height="20" rx="10" fill="#0B132B" stroke="#EF4444" stroke-width="1" />
+    <text x="450" y="156" fill="#F87171" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" text-anchor="middle">PROTECTED</text>
+    
+    <!-- Base Solid Background Line -->
+    <line x1="405" y1="180" x2="475" y2="180" stroke="#7F1D1D" stroke-width="6" stroke-linecap="round" />
+    <!-- Animated Energy Flow -->
+    <line x1="405" y1="180" x2="475" y2="180" stroke="url(#dcGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
+    <!-- Bold Luminous Arrow Head -->
+    <polygon points="490,180 472,170 472,190" fill="#EF4444" filter="url(#arrowGlowRed)" />
+    <polygon points="488,180 474,173 474,187" fill="#FFFFFF" />
+  </g>
 
-  <!-- Wire 4: ACDB to Home & Grid -->
-  <path d="M 845 180 L 935 180" stroke="url(#acGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
-  <polygon points="938,180 926,174 926,186" fill="#10B981" />
-  <text x="890" y="165" fill="#38BDF8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">USABLE POWER</text>
+  <!-- ARROW 3: Hybrid Inverter -> ACDB Box -->
+  <g>
+    <!-- Label Pill Above Arrow -->
+    <rect x="642" y="142" width="76" height="20" rx="10" fill="#0B132B" stroke="#10B981" stroke-width="1" />
+    <text x="680" y="156" fill="#34D399" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" text-anchor="middle">230V AC</text>
+    
+    <!-- Base Solid Background Line -->
+    <line x1="635" y1="180" x2="705" y2="180" stroke="#064E3B" stroke-width="6" stroke-linecap="round" />
+    <!-- Animated Energy Flow -->
+    <line x1="635" y1="180" x2="705" y2="180" stroke="url(#acGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
+    <!-- Bold Luminous Arrow Head -->
+    <polygon points="720,180 702,170 702,190" fill="#10B981" filter="url(#arrowGlow)" />
+    <polygon points="718,180 704,173 704,187" fill="#FFFFFF" />
+  </g>
 
-  <!-- Wire 5: Inverter <-> Battery Storage (Bidirectional) -->
-  <path d="M 565 255 L 565 315" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" class="anim-flow-reverse" />
-  <polygon points="565,318 559,306 571,306" fill="#38BDF8" />
-  <text x="635" y="290" fill="#38BDF8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">2-WAY BACKUP</text>
+  <!-- ARROW 4: ACDB Box -> Home & Grid -->
+  <g>
+    <!-- Label Pill Above Arrow -->
+    <rect x="852" y="142" width="76" height="20" rx="10" fill="#0B132B" stroke="#06B6D4" stroke-width="1" />
+    <text x="890" y="156" fill="#38BDF8" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" text-anchor="middle">AC LOAD</text>
+    
+    <!-- Base Solid Background Line -->
+    <line x1="845" y1="180" x2="915" y2="180" stroke="#0C4A6E" stroke-width="6" stroke-linecap="round" />
+    <!-- Animated Energy Flow -->
+    <line x1="845" y1="180" x2="915" y2="180" stroke="url(#acGrad)" stroke-width="6" stroke-linecap="round" class="anim-flow" />
+    <!-- Bold Luminous Arrow Head -->
+    <polygon points="930,180 912,170 912,190" fill="#06B6D4" filter="url(#arrowGlow)" />
+    <polygon points="928,180 914,173 914,187" fill="#FFFFFF" />
+  </g>
+
+  <!-- ARROW 5: Inverter <-> Battery Storage (Bidirectional) -->
+  <g>
+    <!-- Background Pill -->
+    <rect x="580" y="278" width="94" height="20" rx="10" fill="#0B132B" stroke="#38BDF8" stroke-width="1" />
+    <text x="627" y="292" fill="#38BDF8" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">2-WAY BACKUP</text>
+
+    <!-- Vertical Line -->
+    <line x1="565" y1="265" x2="565" y2="310" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" class="anim-flow-reverse" />
+    <!-- Down Arrow Head -->
+    <polygon points="565,316 557,302 573,302" fill="#38BDF8" />
+    <!-- Up Arrow Head -->
+    <polygon points="565,260 557,274 573,274" fill="#38BDF8" />
+  </g>
 
   <!-- ==================== STAGE 1: SOLAR PV MODULES ==================== -->
   <g transform="translate(65, 95)" class="diagram-node" id="nodeStage1">

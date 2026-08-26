@@ -153,7 +153,7 @@ include __DIR__ . '/includes/header.php';
 
     <!-- Visual Infographic -->
     <div class="solar-flow-wrapper text-center my-4">
-      <img src="assets/images/diagrams/solar-system-flow.svg" alt="Solar Circuit Diagram: Panel to DCDB to Inverter to ACDB to Load" class="mx-auto" style="max-width: 100%; height: auto;">
+      <img src="assets/images/diagrams/solar-system-flow.svg?v=<?php echo file_exists(__DIR__ . '/assets/images/diagrams/solar-system-flow.svg') ? filemtime(__DIR__ . '/assets/images/diagrams/solar-system-flow.svg') : '2.0'; ?>" alt="Solar Circuit Diagram: Panel to DCDB to Inverter to ACDB to Load" class="mx-auto" style="max-width: 100%; height: auto;">
     </div>
 
     <!-- Detailed 5-Step Breakdown -->
