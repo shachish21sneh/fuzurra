@@ -49,7 +49,7 @@ class FuzurraMailer
         $port = defined('SMTP_PORT') ? SMTP_PORT : 465;
         $secure = defined('SMTP_SECURE') ? SMTP_SECURE : 'ssl';
         $user = defined('SMTP_USER') ? SMTP_USER : 'info@fuzurra.in';
-        $pass = defined('SMTP_PASS') ? SMTP_PASS : 'Info@#007';
+        $pass = defined('SMTP_PASS') ? SMTP_PASS : '';
 
         $socketHost = ($secure === 'ssl') ? ('ssl://' . $host) : $host;
         $timeout = 15;

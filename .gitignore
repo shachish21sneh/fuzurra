@@ -1,6 +1,21 @@
-# Secrets & Local Config
-includes/config.local.php
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment & Credentials
 .env
+.env.local
+.env.*.local
+*.secret.php
+includes/config.local.php
+config.local.php
 
 # Data logs
 data/leads.json
+data/*.log
+*.log
+
+# Temp files
+*.tmp
+*.bak

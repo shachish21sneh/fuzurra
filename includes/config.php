@@ -29,15 +29,62 @@ define('SITE_MAPS_EMBED', 'https://maps.google.com/maps?q=Aarza+Square+1+Gaur+Ci
 define('WA_DEFAULT_MSG', 'Hello Fuzurra Industries, I am interested in your solar solutions and products. Please share more details.');
 define('WA_LINK_DEFAULT', 'https://wa.me/' . SITE_WHATSAPP . '?text=' . urlencode(WA_DEFAULT_MSG));
 
-// SMTP Outgoing Mail Configuration
-define('SMTP_HOST', 'mail.fuzurra.in');
-define('SMTP_PORT', 465);
-define('SMTP_SECURE', 'ssl');
-define('SMTP_USER', 'info@fuzurra.in');
-define('SMTP_PASS', getenv('SMTP_PASS') ?: (defined('LOCAL_SMTP_PASS') ? LOCAL_SMTP_PASS : 'Info@#007'));
-define('SMTP_FROM_EMAIL', 'info@fuzurra.in');
-define('SMTP_FROM_NAME', 'Fuzurra Industries Pvt. Ltd.');
-define('NOTIFICATION_RECIPIENT_EMAIL', 'krishnagzp@gmail.com');
+// Load local secret config if exists
+if (file_exists(__DIR__ . '/config.local.php')) {
+    require_once __DIR__ . '/config.local.php';
+}
+
+// Load environment configuration from .env if present
+if (!function_exists('load_env_file')) {
+    function load_env_file($filePath) {
+        if (!file_exists($filePath)) {
+            return;
+        }
+        $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (empty($line) || strpos($line, '#') === 0) {
+                continue;
+            }
+            if (strpos($line, '=') !== false) {
+                list($key, $value) = explode('=', $line, 2);
+                $key = trim($key);
+                $value = trim($value);
+                if ((strpos($value, '"') === 0 && strrpos($value, '"') === strlen($value) - 1) ||
+                    (strpos($value, "'") === 0 && strrpos($value, "'") === strlen($value) - 1)) {
+                    $value = substr($value, 1, -1);
+                }
+                if (!array_key_exists($key, $_SERVER) && !array_key_exists($key, $_ENV)) {
+                    putenv("{$key}={$value}");
+                    $_ENV[$key] = $value;
+                    $_SERVER[$key] = $value;
+                }
+            }
+        }
+    }
+}
+
+if (!function_exists('env')) {
+    function env($key, $default = null) {
+        $val = getenv($key);
+        if ($val !== false) return $val;
+        if (isset($_ENV[$key])) return $_ENV[$key];
+        if (isset($_SERVER[$key])) return $_SERVER[$key];
+        return $default;
+    }
+}
+
+load_env_file(dirname(__DIR__) . '/.env');
+
+// SMTP Outgoing Mail Configuration (Loaded securely from .env or config.local.php)
+define('SMTP_HOST', env('SMTP_HOST', 'mail.fuzurra.in'));
+define('SMTP_PORT', (int)env('SMTP_PORT', 465));
+define('SMTP_SECURE', env('SMTP_SECURE', 'ssl'));
+define('SMTP_USER', env('SMTP_USER', 'info@fuzurra.in'));
+define('SMTP_PASS', env('SMTP_PASS', defined('LOCAL_SMTP_PASS') ? LOCAL_SMTP_PASS : ''));
+define('SMTP_FROM_EMAIL', env('SMTP_FROM_EMAIL', 'info@fuzurra.in'));
+define('SMTP_FROM_NAME', env('SMTP_FROM_NAME', 'Fuzurra Industries Pvt. Ltd.'));
+define('NOTIFICATION_RECIPIENT_EMAIL', env('NOTIFICATION_RECIPIENT_EMAIL', 'krishnagzp@gmail.com'));
 
 // Helper: Active Menu Item
 function isActivePage($pageName) {
