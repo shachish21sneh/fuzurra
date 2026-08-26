@@ -369,60 +369,65 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-subtitle-container {
+.hero-subtitle-wrapper {
   max-width: 620px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
-.hero-subtitle-text {
-  font-size: 1.15rem;
+.hero-subtitle-desc {
+  font-size: 1.12rem;
   color: #CBD5E1;
   font-weight: 400;
-  line-height: 1.65;
-  margin-bottom: 8px;
-  transition: max-height 0.4s ease-out, opacity 0.3s ease;
+  line-height: 1.7;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
 }
 
-.hero-subtitle-text.collapsed {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.btn-read-more {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #F59E0B;
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 4px 14px;
-  border-radius: 20px;
+.hero-readmore-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #F59E0B;
+  font-weight: 600;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-left: 6px;
+  vertical-align: baseline;
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.2s ease-in-out;
   user-select: none;
 }
 
-.btn-read-more:hover {
-  background: rgba(245, 158, 11, 0.15);
-  color: #FBBF24;
-  border-color: rgba(245, 158, 11, 0.4);
+.hero-readmore-pill:hover {
+  background: #F59E0B;
+  color: #070D1E;
+  border-color: #F59E0B;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
   transform: translateY(-1px);
 }
 
-.btn-read-more i {
-  transition: transform 0.3s ease;
-  font-size: 0.8rem;
+.hero-readmore-pill .icon-arrow {
+  transition: transform 0.25s ease;
+  font-size: 0.75rem;
 }
 
-.btn-read-more.expanded i {
+.hero-readmore-pill.expanded .icon-arrow {
   transform: rotate(180deg);
+}
+
+#heroMoreText {
+  animation: fadeInText 0.3s ease;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .hero-visual-card {

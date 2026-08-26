@@ -143,32 +143,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Hero Subtitle Read More / Read Less Collapse Toggle
-  const heroSubtitle = document.getElementById('heroSubtitle');
-  const heroReadMoreBtn = document.getElementById('heroReadMoreBtn');
-
-  if (heroSubtitle && heroReadMoreBtn) {
-    const toggleHeroText = () => {
-      const isCollapsed = heroSubtitle.classList.contains('collapsed');
-      const textSpan = heroReadMoreBtn.querySelector('.read-more-text');
-      
-      if (isCollapsed) {
-        heroSubtitle.classList.remove('collapsed');
-        heroReadMoreBtn.classList.add('expanded');
-        heroReadMoreBtn.setAttribute('aria-expanded', 'true');
-        if (textSpan) textSpan.textContent = 'Read Less';
-      } else {
-        heroSubtitle.classList.add('collapsed');
-        heroReadMoreBtn.classList.remove('expanded');
-        heroReadMoreBtn.setAttribute('aria-expanded', 'false');
-        if (textSpan) textSpan.textContent = 'Read More';
+  window.toggleHeroSubtitleText = function(btn) {
+    const moreText = document.getElementById('heroMoreText');
+    const dots = document.getElementById('heroDots');
+    const label = btn ? btn.querySelector('.read-more-label') : null;
+    
+    if (!moreText) return;
+    
+    if (moreText.style.display === 'none' || !moreText.style.display) {
+      moreText.style.display = 'inline';
+      if (dots) dots.style.display = 'none';
+      if (btn) {
+        btn.classList.add('expanded');
+        btn.setAttribute('aria-expanded', 'true');
       }
-    };
-
-    heroReadMoreBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleHeroText();
-    });
-  }
+      if (label) label.textContent = 'Read Less';
+    } else {
+      moreText.style.display = 'none';
+      if (dots) dots.style.display = 'inline';
+      if (btn) {
+        btn.classList.remove('expanded');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      if (label) label.textContent = 'Read More';
+    }
+  };
 });
 
 // Universal Toast Helper

@@ -25,8 +25,8 @@ require_once __DIR__ . '/config.php';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <!-- Custom Design System & Animations -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=<?php echo file_exists(__DIR__ . '/../assets/css/style.css') ? filemtime(__DIR__ . '/../assets/css/style.css') : '1.0'; ?>">
+  <link rel="stylesheet" href="assets/css/animations.css?v=<?php echo file_exists(__DIR__ . '/../assets/css/animations.css') ? filemtime(__DIR__ . '/../assets/css/animations.css') : '1.0'; ?>">
 </head>
 <body>
 

@@ -30,14 +30,14 @@ include __DIR__ . '/includes/header.php';
           Powering a <span class="gradient-text">Brighter &amp; Smarter</span> Future
         </h1>
         
-        <div class="hero-subtitle-container mb-4">
-          <p class="hero-subtitle-text collapsed" id="heroSubtitle">
-            Complete Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> — Empowering homes, businesses, and industrial facilities with reliable, energy-efficient, and future-ready solutions, including solar inverters, lithium and lead-acid batteries, battery trolleys, home UPS systems, domestic and commercial lighting solutions, air coolers, water heater, led tv , mobile , earbuds, and other electrical and electronic products. We are committed to delivering quality products, dependable performance, and complete energy and electrical solutions tailored to residential, commercial, and industrial requirements.
+        <div class="hero-subtitle-wrapper mb-4">
+          <p class="hero-subtitle-desc" id="heroSubtitlePara">
+            Complete Power Backup &amp; Home Appliance Solutions from <strong>Fuzurra Industries Pvt. Ltd.</strong> — Empowering homes, businesses, and industrial facilities with reliable, energy-efficient, and future-ready solutions, including solar inverters, lithium and lead-acid batteries, battery trolleys, home UPS systems<span id="heroDots">...</span><span id="heroMoreText" style="display: none;">, domestic and commercial lighting solutions, air coolers, water heater, led tv , mobile , earbuds, and other electrical and electronic products. We are committed to delivering quality products, dependable performance, and complete energy and electrical solutions tailored to residential, commercial, and industrial requirements.</span>
+            <button type="button" class="hero-readmore-pill" id="heroReadMoreBtn" onclick="toggleHeroSubtitleText(this)" aria-expanded="false">
+              <span class="read-more-label">Read More</span>
+              <i class="bi bi-chevron-down ms-1 icon-arrow"></i>
+            </button>
           </p>
-          <button type="button" class="btn-read-more" id="heroReadMoreBtn" aria-expanded="false" aria-controls="heroSubtitle">
-            <span class="read-more-text">Read More</span>
-            <i class="bi bi-chevron-down ms-1"></i>
-          </button>
         </div>
 
         <!-- CTA Buttons -->
@@ -559,6 +559,26 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
   </div>
-</section>
+<script>
+function toggleHeroSubtitleText(btn) {
+  const moreText = document.getElementById('heroMoreText');
+  const dots = document.getElementById('heroDots');
+  const label = btn.querySelector('.read-more-label');
+  
+  if (moreText.style.display === 'none' || !moreText.style.display) {
+    moreText.style.display = 'inline';
+    if (dots) dots.style.display = 'none';
+    btn.classList.add('expanded');
+    btn.setAttribute('aria-expanded', 'true');
+    if (label) label.textContent = 'Read Less';
+  } else {
+    moreText.style.display = 'none';
+    if (dots) dots.style.display = 'inline';
+    btn.classList.remove('expanded');
+    btn.setAttribute('aria-expanded', 'false');
+    if (label) label.textContent = 'Read More';
+  }
+}
+</script>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
